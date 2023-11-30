@@ -16,6 +16,84 @@
   src: url("/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
 }
+.page-header, .footer .business-contacts__name {
+  font-size: 60px;
+  line-height: 68px;
+  font-family: "Avenir-Bold";
+}
+@media (max-width: 767px) {
+  .page-header, .footer .business-contacts__name {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Avenir-Bold";
+  }
+}
+
+.section-header {
+  font-size: 36px;
+  line-height: 44px;
+  font-family: "Avenir-Bold";
+}
+@media (max-width: 767px) {
+  .section-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Avenir-Bold";
+  }
+}
+
+.subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Avenir-Demi";
+}
+@media (max-width: 767px) {
+  .subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: "Avenir-Demi";
+  }
+}
+
+.body-copy {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "Avenir-Regular";
+}
+@media (max-width: 767px) {
+  .body-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Avenir-Regular";
+  }
+}
+
+.footer-copy {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Avenir-Regular";
+}
+@media (max-width: 767px) {
+  .footer-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Avenir-Regular";
+  }
+}
+
+.label-or-button {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "Avenir-Bold";
+}
+@media (max-width: 767px) {
+  .label-or-button {
+    font-size: 10px;
+    line-height: 20px;
+    font-family: "Avenir-Bold";
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -55,14 +133,27 @@ img {
 
 .footer {
   background-color: #323232;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-
+.footer .social-media {
+  display: flex;
+  flex-direction: column;
+}
+.footer .social-media__icon-container {
+  display: flex;
+}
+.footer .business-contacts {
+  display: flex;
+  flex-direction: column;
+}
 .logo__container {
   background-color: #323232;
   max-width: 120px;
   max-height: 20px;
 }
-.logo__container .logo {
+.logo__container .logo__link .logo {
   height: 100%;
   width: 100%;
 }

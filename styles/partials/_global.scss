@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 @font-face {
     font-family: 'Avenir-Regular';
@@ -21,7 +22,80 @@
     font-weight: 700;
 }
 
+// Extends
+.page-header{
+    font-size: 60px;
+    line-height: 68px;
+    font-family: 'Avenir-Bold';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'Avenir-Bold';
+    }
+}
 
+.section-header{
+    font-size: 36px;
+    line-height: 44px;
+    font-family: 'Avenir-Bold';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'Avenir-Bold';
+    }
+}
+
+.subheader{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Avenir-Demi';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: 'Avenir-Demi';
+    }
+}
+
+.body-copy{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: 'Avenir-Regular';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 13px;
+        line-height: 18px;
+        font-family: 'Avenir-Regular';
+    }
+}
+
+.footer-copy{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Avenir-Regular';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 13px;
+        line-height: 18px;
+        font-family: 'Avenir-Regular';
+    }
+}
+
+.label-or-button{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Avenir-Bold';
+    // will override the prev styles (hopefully)
+    @include mobile-only{
+        font-size: 10px;
+        line-height: 20px;
+        font-family: 'Avenir-Bold';
+    }
+}
+
+// todo remove padding and margins from h1 etc, p, + more
 
 * {
     box-sizing: border-box;
@@ -47,6 +121,7 @@ img {
     display: block;
     width: 100%;
 }
+
 .header{
     background-color: $color-primary-bandsite-black;
     display: flex;
@@ -64,14 +139,68 @@ img {
 
 .footer{
     background-color: $color-primary-bandsite-black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        // todo media query here changes flex-direction to row for tablet+
+        &__title{
+
+        }
+
+        &__icon-container{
+            display: flex;
+
+            .social-media__icon{
+                .social-media__icon__link{
+                    .social-media__icon__image{
+
+                    }
+                }
+            }
+        }
+    }
+
+    .business-contacts{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-evenly;
+        &__contact-profile{
+
+        }
+
+        &__name{
+            @extend .page-header;
+        }
+
+        &__affiliation{
+
+        }
+        
+        &__location-line-one{
+
+        }
+        &__location-line-two{
+
+        }
+        &__email{
+
+        }
+
+    }
 }
 
 .logo__container{
     background-color: $color-primary-bandsite-black;
     max-width: 120px;
     max-height: 20px;
-    .logo{
-        height: 100%;
-        width: 100%;
+    
+    .logo__link{
+        .logo{
+            height: 100%;
+            width: 100%;
+        }
     }
 }
