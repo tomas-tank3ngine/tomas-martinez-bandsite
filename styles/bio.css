@@ -22,6 +22,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -35,8 +36,21 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 .header {
   background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__navigation-ulist {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .footer {
@@ -51,4 +65,24 @@ ul {
 .logo__container .logo {
   height: 100%;
   width: 100%;
+}
+
+.hero__section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero__section .hero__image {
+  width: 100%;
+}
+.hero__section .hero__overlay {
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  align-items: center;
+  inset: 0;
+}
+.hero__section .hero__title {
+  position: absolute;
+  opacity: 1;
 }/*# sourceMappingURL=bio.css.map */
