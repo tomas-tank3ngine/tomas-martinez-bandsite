@@ -1,6 +1,20 @@
 @font-face {
-  font-family: "Avenir Next LT Pro";
-  src: url(assets\f onts\a venirNextLTPro-Regular.otf) format("");
+  font-family: "Avenir-Regular";
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2");
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("/assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2");
+  src: url("/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
 }
 * {
   box-sizing: border-box;
@@ -21,10 +35,20 @@ ul {
   padding: 0;
 }
 
-.logo__container {
+.header {
   background-color: #323232;
 }
+
+.footer {
+  background-color: #323232;
+}
+
+.logo__container {
+  background-color: #323232;
+  max-width: 120px;
+  max-height: 20px;
+}
 .logo__container .logo {
-  text-transform: uppercase;
-  color: #FFFFFF;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */
