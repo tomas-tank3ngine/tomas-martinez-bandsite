@@ -27,7 +27,7 @@
     font-size: 60px;
     line-height: 68px;
     font-family: 'Avenir-Bold';
-    // will override the prev styles (hopefully)
+    
     @include mobile-only{
         font-size: 24px;
         line-height: 32px;
@@ -39,7 +39,6 @@
     font-size: 36px;
     line-height: 44px;
     font-family: 'Avenir-Bold';
-    // will override the prev styles (hopefully)
     @include mobile-only{
         font-size: 24px;
         line-height: 32px;
@@ -51,7 +50,6 @@
     font-size: 24px;
     line-height: 32px;
     font-family: 'Avenir-Demi';
-    // will override the prev styles (hopefully)
     @include mobile-only{
         font-size: 14px;
         line-height: 22px;
@@ -63,7 +61,6 @@
     font-size: 14px;
     line-height: 22px;
     font-family: 'Avenir-Regular';
-    // will override the prev styles (hopefully)
     @include mobile-only{
         font-size: 13px;
         line-height: 18px;
@@ -75,7 +72,6 @@
     font-size: 14px;
     line-height: 20px;
     font-family: 'Avenir-Regular';
-    // will override the prev styles (hopefully)
     @include mobile-only{
         font-size: 13px;
         line-height: 18px;
@@ -87,10 +83,19 @@
     font-size: 12px;
     line-height: 20px;
     font-family: 'Avenir-Bold';
-    // will override the prev styles (hopefully)
     @include mobile-only{
         font-size: 10px;
         line-height: 20px;
+        font-family: 'Avenir-Bold';
+    }
+}
+
+.spacing-headline{
+    
+    
+    @include mobile-only{
+        font-size: 24px;
+        line-height: 32px;
         font-family: 'Avenir-Bold';
     }
 }
@@ -122,6 +127,11 @@ img {
     width: 100%;
 }
 
+p, h1, h2, h3, h4, h5, h6, li {
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     background-color: $color-primary-bandsite-black;
     display: flex;
@@ -142,12 +152,15 @@ img {
     position: relative;
     display: flex;
     flex-direction: column;
+    color: $color-primary-white;
+
     .social-media{
         display: flex;
         flex-direction: column;
         // todo media query here changes flex-direction to row for tablet+
         &__title{
-
+            @extend .section-header;
+            color: $color-primary-white;
         }
 
         &__icon-container{
@@ -164,29 +177,30 @@ img {
     }
 
     .business-contacts{
+        
         display: flex;
         flex-direction: column;
         // justify-content: space-evenly;
         &__contact-profile{
-
+            
         }
 
         &__name{
-            @extend .page-header;
+            @extend .subheader;
         }
 
         &__affiliation{
-
+            @extend .subheader;
         }
         
         &__location-line-one{
-
+            @extend .footer-copy;
         }
         &__location-line-two{
-
+            @extend .footer-copy;
         }
         &__email{
-
+            @extend .footer-copy;
         }
 
     }

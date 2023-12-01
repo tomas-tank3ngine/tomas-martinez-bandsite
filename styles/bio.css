@@ -16,65 +16,65 @@
   src: url("/assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
 }
-.page-header, .footer .business-contacts__name {
+.page-header, .hero__section .hero__title {
   font-size: 60px;
   line-height: 68px;
   font-family: "Avenir-Bold";
 }
 @media (max-width: 767px) {
-  .page-header, .footer .business-contacts__name {
+  .page-header, .hero__section .hero__title {
     font-size: 24px;
     line-height: 32px;
     font-family: "Avenir-Bold";
   }
 }
 
-.section-header {
+.section-header, .main .about .musicians-intro__title, .main .photo-gallery__title, .footer .social-media__title {
   font-size: 36px;
   line-height: 44px;
   font-family: "Avenir-Bold";
 }
 @media (max-width: 767px) {
-  .section-header {
+  .section-header, .main .about .musicians-intro__title, .main .photo-gallery__title, .footer .social-media__title {
     font-size: 24px;
     line-height: 32px;
     font-family: "Avenir-Bold";
   }
 }
 
-.subheader {
+.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__affiliation, .footer .business-contacts__name {
   font-size: 24px;
   line-height: 32px;
   font-family: "Avenir-Demi";
 }
 @media (max-width: 767px) {
-  .subheader {
+  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__affiliation, .footer .business-contacts__name {
     font-size: 14px;
     line-height: 22px;
     font-family: "Avenir-Demi";
   }
 }
 
-.body-copy {
+.body-copy, .main .about .bio__text-container .bio__text {
   font-size: 14px;
   line-height: 22px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .body-copy {
+  .body-copy, .main .about .bio__text-container .bio__text {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
   }
 }
 
-.footer-copy {
+.footer-copy, .footer .business-contacts__email, .footer .business-contacts__location-line-two, .footer .business-contacts__location-line-one {
   font-size: 14px;
   line-height: 20px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .footer-copy {
+  .footer-copy, .footer .business-contacts__email, .footer .business-contacts__location-line-two, .footer .business-contacts__location-line-one {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
@@ -90,6 +90,14 @@
   .label-or-button {
     font-size: 10px;
     line-height: 20px;
+    font-family: "Avenir-Bold";
+  }
+}
+
+@media (max-width: 767px) {
+  .spacing-headline {
+    font-size: 24px;
+    line-height: 32px;
     font-family: "Avenir-Bold";
   }
 }
@@ -119,6 +127,11 @@ img {
   width: 100%;
 }
 
+p, h1, h2, h3, h4, h5, h6, li {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -136,10 +149,14 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
+  color: #FFFFFF;
 }
 .footer .social-media {
   display: flex;
   flex-direction: column;
+}
+.footer .social-media__title {
+  color: #FFFFFF;
 }
 .footer .social-media__icon-container {
   display: flex;
@@ -175,5 +192,32 @@ img {
 }
 .hero__section .hero__title {
   position: absolute;
-  opacity: 1;
+  color: #FFFFFF;
+}
+
+.main .about .musicians-intro__title {
+  color: #323232;
+}
+.main .about .musicians-intro__container .musicians-intro__quote {
+  color: #323232;
+}
+.main .about .musicians-intro__container .musicians-intro__quote-author {
+  color: #323232;
+}
+.main .about .bio__title {
+  color: #000000;
+}
+.main .about .bio__text-container .bio__text {
+  color: #323232;
+}
+.main .photo-gallery {
+  background-color: #FAFAFA;
+}
+@media (max-width: 767px) {
+  .main .photo-gallery {
+    padding: 0 16px;
+  }
+}
+.main .photo-gallery__title {
+  color: #323232;
 }/*# sourceMappingURL=bio.css.map */

@@ -19,7 +19,72 @@
     }
     .hero__title{
         position: absolute;
-        opacity: 1;
+
+        @extend .page-header;
+        color: $color-primary-white;
+    }
+}
+
+.main{
+    .about{
+        .musicians-intro{
+
+            &__title{
+                @extend .section-header;
+                color: $color-primary-bandsite-black;
+            }
+
+            &__image{
+
+            }
+
+            &__container{
+                .musicians-intro__quote{
+                    @extend .subheader;
+                    color: $color-primary-bandsite-black;
+                }
+
+                .musicians-intro__quote-author{
+                    @extend .subheader;
+                    color: $color-primary-bandsite-black;
+                }
+            }
+        }
+        
+        .bio{
+
+            &__title{
+                @extend .subheader;
+                color: $color-secondary-bandsite-darkblack;
+            }
+
+            &__text-container{
+
+                .bio__text{
+                    @extend .body-copy;
+                    color: $color-primary-bandsite-black;
+
+                }
+            }
+        }
+    }
+
+    .photo-gallery{
+        background-color: $color-secondary-bandsite-alabaster;
+        @include mobile-only{
+            padding: 0 16px;
+        }
+        &__title{
+            @extend .section-header;
+            color: $color-primary-bandsite-black;
+        }
+
+        &__container{
+
+            .photo-gallery__image{
+
+            }
+        }
     }
 }
 
