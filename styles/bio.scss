@@ -19,7 +19,12 @@
     }
     .hero__title{
         position: absolute;
-
+        @include mobile-only{
+            padding: 0 16px;
+        }
+        // @include tablet{
+        //     padding: 0 36px;
+        // }
         @extend .page-header;
         color: $color-primary-white;
     }
@@ -27,9 +32,14 @@
 
 .main{
     .about{
+        @include mobile-only{
+            padding: 0 16px;
+        }
         .musicians-intro{
 
             &__title{
+                @extend .headline-spacing;
+                
                 @extend .section-header;
                 color: $color-primary-bandsite-black;
             }
@@ -39,6 +49,9 @@
             }
 
             &__container{
+                @extend .headline-spacing;
+                padding-bottom: 0;
+                
                 .musicians-intro__quote{
                     @extend .subheader;
                     color: $color-primary-bandsite-black;
@@ -54,16 +67,24 @@
         .bio{
 
             &__title{
+                @extend .headline-spacing;
                 @extend .subheader;
                 color: $color-secondary-bandsite-darkblack;
             }
 
             &__text-container{
-
+                display: flex;
+                @include mobile-only{
+                    flex-direction: column;
+                }
                 .bio__text{
+                    display: block;
                     @extend .body-copy;
                     color: $color-primary-bandsite-black;
 
+                    @include mobile-only{
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
@@ -74,15 +95,25 @@
         @include mobile-only{
             padding: 0 16px;
         }
+
         &__title{
+            @extend .headline-spacing;
             @extend .section-header;
             color: $color-primary-bandsite-black;
+            
         }
 
         &__container{
+            display: flex;
+            @include mobile-only{
+                flex-direction: column;
+                // flex-wrap: wrap;
+            }
 
             .photo-gallery__image{
-
+                @include mobile-only{
+                    margin-bottom: 16px;
+                }
             }
         }
     }

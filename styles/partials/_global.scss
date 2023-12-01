@@ -3,22 +3,22 @@
 
 @font-face {
     font-family: 'Avenir-Regular';
-    src: url('/assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
     src: url('/assets/fonts/AvenirNextLTPro-Regular.woff') format('woff');
+    src: url('/assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Avenir-Demi';
-    src: url('/assets/fonts/AvenirNextLTPro-Demi.woff2') format('woff2');
     src: url('/assets/fonts/AvenirNextLTPro-Demi.woff') format('woff');
+    src: url('/assets/fonts/AvenirNextLTPro-Demi.woff2') format('woff2');
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'Avenir-Bold';
-    src: url('/assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
     src: url('/assets/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+    src: url('/assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
     font-weight: 700;
 }
 
@@ -39,6 +39,7 @@
     font-size: 36px;
     line-height: 44px;
     font-family: 'Avenir-Bold';
+
     @include mobile-only{
         font-size: 24px;
         line-height: 32px;
@@ -90,13 +91,21 @@
     }
 }
 
-.spacing-headline{
-    
-    
+.headline-spacing{
+    padding: 48px 0 36px 0;
+
     @include mobile-only{
-        font-size: 24px;
-        line-height: 32px;
-        font-family: 'Avenir-Bold';
+        padding: 24px 0 16px 0;
+    }
+}
+
+
+
+.reponsive-container{
+    flex-direction: row;
+
+    @include mobile-only{
+        flex-direction: column;
     }
 }
 
@@ -138,6 +147,7 @@ p, h1, h2, h3, h4, h5, h6, li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @extend .headline-spacing;
 
     &__navigation{
         &-ulist{
@@ -152,21 +162,30 @@ p, h1, h2, h3, h4, h5, h6, li {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     color: $color-primary-white;
+
+    @include mobile-only{
+        padding: 0 16px;
+    }
 
     .social-media{
         display: flex;
         flex-direction: column;
         // todo media query here changes flex-direction to row for tablet+
         &__title{
+            @extend .headline-spacing;
             @extend .section-header;
             color: $color-primary-white;
         }
 
         &__icon-container{
             display: flex;
-
+            
             .social-media__icon{
+                @include mobile-only{
+                    padding: 0 32px 16px 0px;
+                }
                 .social-media__icon__link{
                     .social-media__icon__image{
 
@@ -203,6 +222,16 @@ p, h1, h2, h3, h4, h5, h6, li {
             @extend .footer-copy;
         }
 
+    }
+
+
+
+    .copyright{
+        .copyright__text{
+            @include mobile-only{
+                margin-bottom: 16px;
+            }
+        }
     }
 }
 
