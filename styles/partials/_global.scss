@@ -101,13 +101,13 @@
 
 
 
-.reponsive-container{
-    flex-direction: row;
+// .reponsive-container{
+//     flex-direction: row;
 
-    @include mobile-only{
-        flex-direction: column;
-    }
-}
+//     @include mobile-only{
+//         flex-direction: column;
+//     }
+// }
 
 // todo remove padding and margins from h1 etc, p, + more
 
@@ -144,15 +144,45 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header{
     background-color: $color-primary-bandsite-black;
     display: flex;
+    //mobile only, change this direction for desktop
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @extend .headline-spacing;
+    padding-bottom: 0;
 
-    &__navigation{
-        &-ulist{
+    .navigation{
+        width: 100%;
+        &__ulist{
             display:flex;
-            justify-content: space-evenly;
+            // justify-content: space-around;
+            width: 100%;
+            .navigation__item{
+                width: 50%;
+                
+                text-align: center;
+                @extend .subheader;
+
+                .navigation__link{
+                    color: $color-secondary-bandsite-mercury;
+                    border-bottom: solid transparent 2px;
+                    display: block;
+                    padding-bottom: 8px;
+                    width: 100%;
+
+                    &:hover{
+                        border-bottom: solid rgba($color-primary-white, 1) 2px;
+                        color: $color-primary-white;
+                    }
+
+                    &.active-page{
+                        border-bottom: solid rgba($color-primary-white, 1) 2px;
+                        color: $color-primary-white;
+                        font-weight: bold;
+                    }
+
+                }
+            }
         }
     }
 }

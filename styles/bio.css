@@ -42,13 +42,13 @@
   }
 }
 
-.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
+.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
   font-size: 24px;
   line-height: 32px;
   font-family: "Avenir-Demi";
 }
 @media (max-width: 767px) {
-  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
+  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
     font-size: 14px;
     line-height: 22px;
     font-family: "Avenir-Demi";
@@ -103,15 +103,6 @@
   }
 }
 
-.reponsive-container {
-  flex-direction: row;
-}
-@media (max-width: 767px) {
-  .reponsive-container {
-    flex-direction: column;
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -148,10 +139,34 @@ p, h1, h2, h3, h4, h5, h6, li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0;
 }
-.header__navigation-ulist {
+.header .navigation {
+  width: 100%;
+}
+.header .navigation__ulist {
   display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+}
+.header .navigation__ulist .navigation__item {
+  width: 50%;
+  text-align: center;
+}
+.header .navigation__ulist .navigation__item .navigation__link {
+  color: #E1E1E1;
+  border-bottom: solid transparent 2px;
+  display: block;
+  padding-bottom: 8px;
+  width: 100%;
+}
+.header .navigation__ulist .navigation__item .navigation__link:hover {
+  border-bottom: solid white 2px;
+  color: #FFFFFF;
+}
+.header .navigation__ulist .navigation__item .navigation__link.active-page {
+  border-bottom: solid white 2px;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .footer {
