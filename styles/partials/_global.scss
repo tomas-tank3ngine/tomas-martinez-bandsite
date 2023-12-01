@@ -201,7 +201,9 @@ p, h1, h2, h3, h4, h5, h6, li {
         flex-direction: column;
         // justify-content: space-evenly;
         &__contact-profile{
-            
+            @include mobile-only{
+                margin-bottom: 16px;
+            }
         }
 
         &__name{
@@ -231,6 +233,7 @@ p, h1, h2, h3, h4, h5, h6, li {
             @include mobile-only{
                 margin-bottom: 16px;
             }
+            @extend .footer-copy;
         }
     }
 }
@@ -239,8 +242,12 @@ p, h1, h2, h3, h4, h5, h6, li {
     background-color: $color-primary-bandsite-black;
     max-width: 120px;
     max-height: 20px;
+    @include mobile-only{
+        margin-bottom: 16px;
+    }
     
     .logo__link{
+        
         .logo{
             height: 100%;
             width: 100%;
