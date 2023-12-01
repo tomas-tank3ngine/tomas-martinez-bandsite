@@ -199,34 +199,41 @@ p, h1, h2, h3, h4, h5, h6, li {
         
         display: flex;
         flex-direction: column;
+        @include mobile-only{
+            margin-bottom: 40px;
+        }
         // justify-content: space-evenly;
         &__contact-profile{
             @include mobile-only{
                 margin-bottom: 16px;
             }
-        }
 
-        &__name{
-            @extend .subheader;
-        }
-
-        &__affiliation{
-            @extend .subheader;
-        }
+            .business-contacts__contact-group{
+                @include mobile-only{
+                    margin-bottom: 16px;
+                }
+                .business-contacts__name{
+                    @extend .subheader;
+                }
         
-        &__location-line-one{
-            @extend .footer-copy;
-        }
-        &__location-line-two{
-            @extend .footer-copy;
-        }
-        &__email{
-            @extend .footer-copy;
-        }
+                .business-contacts__affiliation{
+                    @extend .subheader;
+                }
+                
+                .business-contacts__location-line-one{
+                    @extend .footer-copy;
+                }
 
+                .business-contacts__location-line-two{
+                    @extend .footer-copy;
+                }
+
+                .business-contacts__email{
+                    @extend .footer-copy;
+                }
+            }
+        }
     }
-
-
 
     .copyright{
         .copyright__text{
@@ -253,4 +260,9 @@ p, h1, h2, h3, h4, h5, h6, li {
             width: 100%;
         }
     }
+}
+
+.logo__footer-container{
+    @extend .logo__container;
+    
 }

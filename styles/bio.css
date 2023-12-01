@@ -42,13 +42,13 @@
   }
 }
 
-.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__affiliation, .footer .business-contacts__name {
+.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
   font-size: 24px;
   line-height: 32px;
   font-family: "Avenir-Demi";
 }
 @media (max-width: 767px) {
-  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__affiliation, .footer .business-contacts__name {
+  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
     font-size: 14px;
     line-height: 22px;
     font-family: "Avenir-Demi";
@@ -68,13 +68,13 @@
   }
 }
 
-.footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__email, .footer .business-contacts__location-line-two, .footer .business-contacts__location-line-one {
+.footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one {
   font-size: 14px;
   line-height: 20px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__email, .footer .business-contacts__location-line-two, .footer .business-contacts__location-line-one {
+  .footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
@@ -187,7 +187,17 @@ p, h1, h2, h3, h4, h5, h6, li {
   flex-direction: column;
 }
 @media (max-width: 767px) {
+  .footer .business-contacts {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
   .footer .business-contacts__contact-profile {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .footer .business-contacts__contact-profile .business-contacts__contact-group {
     margin-bottom: 16px;
   }
 }
@@ -197,17 +207,17 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.logo__container {
+.logo__container, .logo__footer-container {
   background-color: #323232;
   max-width: 120px;
   max-height: 20px;
 }
 @media (max-width: 767px) {
-  .logo__container {
+  .logo__container, .logo__footer-container {
     margin-bottom: 16px;
   }
 }
-.logo__container .logo__link .logo {
+.logo__container .logo__link .logo, .logo__footer-container .logo__link .logo {
   height: 100%;
   width: 100%;
 }
