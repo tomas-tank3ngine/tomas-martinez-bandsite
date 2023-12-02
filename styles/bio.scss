@@ -68,13 +68,19 @@
 
         &__text-container{
             display: flex;
+            justify-content: space-between;
             @include mobile-only{
                 flex-direction: column;
             }
+            
             .bio__text{
                 display: block;
                 @extend .body-copy;
                 color: $color-primary-bandsite-black;
+
+                @include tablet{
+                    max-width: 47%;//todo
+                }
 
                 @include mobile-only{
                     margin-bottom: 16px;

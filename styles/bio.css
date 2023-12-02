@@ -370,6 +370,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .bio__text-container {
   display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 767px) {
   .main .bio__text-container {
@@ -379,6 +380,11 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .bio__text-container .bio__text {
   display: block;
   color: #323232;
+}
+@media (min-width: 768px) {
+  .main .bio__text-container .bio__text {
+    max-width: 47%;
+  }
 }
 @media (max-width: 767px) {
   .main .bio__text-container .bio__text {
