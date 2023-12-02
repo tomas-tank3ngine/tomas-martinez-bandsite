@@ -253,26 +253,40 @@ p, h1, h2, h3, h4, h5, h6, li {
     .business-contacts{
         
         display: flex;
-        flex-direction: column;
+        
         @include mobile-only{
             margin-bottom: 40px;
+            flex-direction: column;
         }
-        // justify-content: space-evenly;
+        @include tablet{
+            margin-bottom: 36px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         &__contact-profile{
             @include mobile-only{
                 margin-bottom: 16px;
+            }
+            @include tablet{
+                margin-bottom: 40px;
+                min-width: 30%;
             }
 
             .business-contacts__contact-group{
                 @include mobile-only{
                     margin-bottom: 16px;
                 }
+                @include tablet{
+                    margin-bottom: 24px;
+                }
                 .business-contacts__name{
-                    @extend .subheader;
+                    @extend .footer-copy;
+                    font-weight: bold;
                 }
         
                 .business-contacts__affiliation{
-                    @extend .subheader;
+                    @extend .footer-copy;
+                    font-weight: bold;
                 }
                 
                 .business-contacts__location-line-one{
@@ -292,10 +306,17 @@ p, h1, h2, h3, h4, h5, h6, li {
 
     .copyright{
         .copyright__text{
+            @extend .footer-copy;
+
             @include mobile-only{
                 margin-bottom: 16px;
             }
-            @extend .footer-copy;
+
+            @include tablet{
+                margin-bottom: 36px;
+            }
+
+            
         }
     }
 }
