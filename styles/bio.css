@@ -182,6 +182,11 @@ p, h1, h2, h3, h4, h5, h6, li {
     padding: 0 16px;
   }
 }
+@media (min-width: 768px) {
+  .footer {
+    padding: 0 36px;
+  }
+}
 .footer .social-media {
   display: flex;
   flex-direction: column;
@@ -307,6 +312,11 @@ p, h1, h2, h3, h4, h5, h6, li {
     padding: 0 16px;
   }
 }
+@media (min-width: 768px) {
+  .main .photo-gallery {
+    padding: 0 36px 36px 36px;
+  }
+}
 .main .photo-gallery__title {
   color: #323232;
 }
@@ -318,8 +328,30 @@ p, h1, h2, h3, h4, h5, h6, li {
     flex-direction: column;
   }
 }
+@media (min-width: 768px) {
+  .main .photo-gallery__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .main .photo-gallery__container .photo-gallery__item {
+    flex-basis: 300px;
+  }
+}
 @media (max-width: 767px) {
-  .main .photo-gallery__container .photo-gallery__image {
+  .main .photo-gallery__container .photo-gallery__item .photo-gallery__image {
     margin-bottom: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .main .photo-gallery__container .photo-gallery__item .photo-gallery__image {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    vertical-align: middle;
+    border-radius: 5px;
   }
 }/*# sourceMappingURL=bio.css.map */

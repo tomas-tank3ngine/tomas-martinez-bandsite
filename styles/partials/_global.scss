@@ -33,7 +33,7 @@
     font-size: 60px;
     line-height: 68px;
     font-family: 'Avenir-Bold';
-    
+
     @include mobile-only{
         font-size: 24px;
         line-height: 32px;
@@ -205,6 +205,10 @@ p, h1, h2, h3, h4, h5, h6, li {
         padding: 0 16px;
     }
 
+    @include tablet{
+        padding: 0 36px;
+    }
+
     .social-media{
         display: flex;
         flex-direction: column;
@@ -299,6 +303,10 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 
 .logo__footer-container{
-    @extend .logo__container;
+    @extend .logo__container;   
     
+    //min width of tablet, works for desktop as well
+    @include tablet{
+                
+    }
 }

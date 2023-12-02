@@ -51,7 +51,7 @@
             &__container{
                 @extend .headline-spacing;
                 padding-bottom: 0;
-                
+
                 .musicians-intro__quote{
                     @extend .subheader;
                     color: $color-primary-bandsite-black;
@@ -96,25 +96,61 @@
             padding: 0 16px;
         }
 
+        @include tablet{
+            padding: 0 36px 36px 36px;
+            // padding: 0 12px 36px 12px;
+        }
+
         &__title{
             @extend .headline-spacing;
             @extend .section-header;
             color: $color-primary-bandsite-black;
-            
         }
 
         &__container{
             display: flex;
             @include mobile-only{
                 flex-direction: column;
-                // flex-wrap: wrap;
             }
 
-            .photo-gallery__image{
-                @include mobile-only{
-                    margin-bottom: 16px;
-                }
+            // @include tablet{
+            //     width: 100%;
+            //     flex-wrap: wrap;
+            //     justify-content: space-between;
+            //     gap: 33px;
+            // }
+
+            @include tablet{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
             }
+            .photo-gallery__item{
+                // @include tablet{
+                //     
+                //     flex-basis: 30%;
+                // }                
+                @include tablet{
+                    flex-basis: 300px;
+                }                
+                .photo-gallery__image{
+                    @include mobile-only{
+                        margin-bottom: 16px;
+                    }
+                    // @include tablet{
+                    //     max-width: 100%;
+                    //     object-fit: cover;
+                    //     vertical-align: middle;
+                    // }
+                    @include tablet{
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        vertical-align: middle;
+                        border-radius: 5px;
+                    }
+                }
+            }  
         }
     }
 }
