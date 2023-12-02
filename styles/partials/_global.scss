@@ -105,6 +105,20 @@
     }
 }
 
+.margin-format{
+    @include mobile-only {
+        margin: 0 16px;
+    }
+
+    @include tablet {
+        margin: 0 36px;
+    }
+
+    @include desktop {
+        margin: 0 36px;
+    }    
+}
+
 
 
 // .reponsive-container{
@@ -212,6 +226,7 @@ p, h1, h2, h3, h4, h5, h6, li {
     .social-media{
         display: flex;
         flex-direction: column;
+        // @extend .margin-format;
         // todo media query here changes flex-direction to row for tablet+
         &__title{
             @extend .headline-spacing;

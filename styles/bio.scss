@@ -6,7 +6,6 @@
     position: relative;
     display: flex;
     align-items: center;
-
     .hero__image{
         width: 100%;
     }
@@ -22,135 +21,120 @@
         @include mobile-only{
             padding: 0 16px;
         }
-        // @include tablet{
-        //     padding: 0 36px;
-        // }
+        @include tablet{
+            padding: 0 36px;
+        }
         @extend .page-header;
         color: $color-primary-white;
     }
 }
 
 .main{
-    .about{
-        @include mobile-only{
-            padding: 0 16px;
-        }
-        .musicians-intro{
-
-            &__title{
-                @extend .headline-spacing;
-                
-                @extend .section-header;
-                color: $color-primary-bandsite-black;
-            }
-
-            &__image{
-
-            }
-
-            &__container{
-                @extend .headline-spacing;
-                padding-bottom: 0;
-
-                .musicians-intro__quote{
-                    @extend .subheader;
-                    color: $color-primary-bandsite-black;
-                }
-
-                .musicians-intro__quote-author{
-                    @extend .subheader;
-                    color: $color-primary-bandsite-black;
-                }
-            }
-        }
-        
-        .bio{
-
-            &__title{
-                @extend .headline-spacing;
-                @extend .subheader;
-                color: $color-secondary-bandsite-darkblack;
-            }
-
-            &__text-container{
-                display: flex;
-                @include mobile-only{
-                    flex-direction: column;
-                }
-                .bio__text{
-                    display: block;
-                    @extend .body-copy;
-                    color: $color-primary-bandsite-black;
-
-                    @include mobile-only{
-                        margin-bottom: 16px;
-                    }
-                }
-            }
-        }
-    }
-
-    .photo-gallery{
-        background-color: $color-secondary-bandsite-alabaster;
-        @include mobile-only{
-            padding: 0 16px;
-        }
-
-        @include tablet{
-            padding: 0 36px 36px 36px;
-            // padding: 0 12px 36px 12px;
-        }
-
+    .musicians-intro{
+        @extend .margin-format;
         &__title{
             @extend .headline-spacing;
             @extend .section-header;
             color: $color-primary-bandsite-black;
         }
 
+        &__image{
+
+        }
+
         &__container{
+            @extend .headline-spacing;
+            padding-bottom: 0;
+
+            .musicians-intro__quote{
+                @extend .subheader;
+                color: $color-primary-bandsite-black;
+            }
+
+            .musicians-intro__quote-author{
+                @extend .subheader;
+                color: $color-primary-bandsite-black;
+            }
+        }
+    }
+    
+    .bio{
+        @extend .margin-format;
+        &__title{
+            @extend .headline-spacing;
+            @extend .subheader;
+            color: $color-secondary-bandsite-darkblack;
+        }
+
+        &__text-container{
             display: flex;
             @include mobile-only{
                 flex-direction: column;
             }
+            .bio__text{
+                display: block;
+                @extend .body-copy;
+                color: $color-primary-bandsite-black;
 
-            // @include tablet{
-            //     width: 100%;
-            //     flex-wrap: wrap;
-            //     justify-content: space-between;
-            //     gap: 33px;
-            // }
-
-            @include tablet{
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 24px;
-            }
-            .photo-gallery__item{
-                // @include tablet{
-                //     
-                //     flex-basis: 30%;
-                // }                
-                @include tablet{
-                    flex-basis: 300px;
-                }                
-                .photo-gallery__image{
-                    @include mobile-only{
-                        margin-bottom: 16px;
-                    }
-                    // @include tablet{
-                    //     max-width: 100%;
-                    //     object-fit: cover;
-                    //     vertical-align: middle;
-                    // }
-                    @include tablet{
-                        max-width: 100%;
-                        height: auto;
-                        object-fit: cover;
-                        vertical-align: middle;
-                        border-radius: 5px;
-                    }
+                @include mobile-only{
+                    margin-bottom: 16px;
                 }
-            }  
+            }
+        }
+    }
+    
+    .format-container{
+        background-color: $color-secondary-bandsite-alabaster;
+
+        .photo-gallery{
+            @extend .margin-format;
+            // @include mobile-only{
+            //     padding-bottom: 16px;
+            // }
+    
+            @include tablet{
+                padding-bottom: 36px;
+            }
+    
+            &__title{
+                @extend .headline-spacing;
+                @extend .section-header;
+                color: $color-primary-bandsite-black;
+            }
+    
+            &__container{
+                display: flex;
+                @include mobile-only{
+                    flex-direction: column;
+                }
+    
+                @include tablet{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: 33px;
+                }
+    
+                .photo-gallery__item{
+                    @include tablet{
+                        
+                        flex-basis: 30%;
+                    }                
+                                
+                    .photo-gallery__image{
+                        @include mobile-only{
+                            margin-bottom: 16px;
+                        }
+                        @include tablet{
+                            max-width: 100%;
+                            object-fit: cover;
+                            vertical-align: middle;
+                        }
+                        
+                    }
+                }  
+            }
+            
         }
     }
 }

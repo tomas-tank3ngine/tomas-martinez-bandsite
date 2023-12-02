@@ -29,39 +29,39 @@
   }
 }
 
-.section-header, .main .about .musicians-intro__title, .main .photo-gallery__title, .footer .social-media__title {
+.section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .social-media__title {
   font-size: 36px;
   line-height: 44px;
   font-family: "Avenir-Bold";
 }
 @media (max-width: 767px) {
-  .section-header, .main .about .musicians-intro__title, .main .photo-gallery__title, .footer .social-media__title {
+  .section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .social-media__title {
     font-size: 24px;
     line-height: 32px;
     font-family: "Avenir-Bold";
   }
 }
 
-.subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
+.subheader, .main .musicians-intro__container .musicians-intro__quote, .main .musicians-intro__container .musicians-intro__quote-author, .main .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
   font-size: 24px;
   line-height: 32px;
   font-family: "Avenir-Demi";
 }
 @media (max-width: 767px) {
-  .subheader, .main .about .musicians-intro__container .musicians-intro__quote, .main .about .musicians-intro__container .musicians-intro__quote-author, .main .about .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
+  .subheader, .main .musicians-intro__container .musicians-intro__quote, .main .musicians-intro__container .musicians-intro__quote-author, .main .bio__title, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name, .header .navigation__ulist .navigation__item {
     font-size: 14px;
     line-height: 22px;
     font-family: "Avenir-Demi";
   }
 }
 
-.body-copy, .main .about .bio__text-container .bio__text {
+.body-copy, .main .bio__text-container .bio__text {
   font-size: 14px;
   line-height: 22px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .body-copy, .main .about .bio__text-container .bio__text {
+  .body-copy, .main .bio__text-container .bio__text {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
@@ -94,12 +94,28 @@
   }
 }
 
-.headline-spacing, .main .about .musicians-intro__title, .main .about .musicians-intro__container, .main .about .bio__title, .main .photo-gallery__title, .footer .social-media__title, .header {
+.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .social-media__title, .header {
   padding: 48px 0 36px 0;
 }
 @media (max-width: 767px) {
-  .headline-spacing, .main .about .musicians-intro__title, .main .about .musicians-intro__container, .main .about .bio__title, .main .photo-gallery__title, .footer .social-media__title, .header {
+  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .social-media__title, .header {
     padding: 24px 0 16px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+    margin: 0 16px;
+  }
+}
+@media (min-width: 768px) {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+    margin: 0 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+    margin: 0 36px;
   }
 }
 
@@ -266,92 +282,86 @@ p, h1, h2, h3, h4, h5, h6, li {
     padding: 0 16px;
   }
 }
-
-@media (max-width: 767px) {
-  .main .about {
-    padding: 0 16px;
+@media (min-width: 768px) {
+  .hero__section .hero__title {
+    padding: 0 36px;
   }
 }
-.main .about .musicians-intro__title {
+
+.main .musicians-intro__title {
   color: #323232;
 }
-.main .about .musicians-intro__container {
+.main .musicians-intro__container {
   padding-bottom: 0;
 }
-.main .about .musicians-intro__container .musicians-intro__quote {
+.main .musicians-intro__container .musicians-intro__quote {
   color: #323232;
 }
-.main .about .musicians-intro__container .musicians-intro__quote-author {
+.main .musicians-intro__container .musicians-intro__quote-author {
   color: #323232;
 }
-.main .about .bio__title {
+.main .bio__title {
   color: #000000;
 }
-.main .about .bio__text-container {
+.main .bio__text-container {
   display: flex;
 }
 @media (max-width: 767px) {
-  .main .about .bio__text-container {
+  .main .bio__text-container {
     flex-direction: column;
   }
 }
-.main .about .bio__text-container .bio__text {
+.main .bio__text-container .bio__text {
   display: block;
   color: #323232;
 }
 @media (max-width: 767px) {
-  .main .about .bio__text-container .bio__text {
+  .main .bio__text-container .bio__text {
     margin-bottom: 16px;
   }
 }
-.main .photo-gallery {
+.main .format-container {
   background-color: #FAFAFA;
 }
-@media (max-width: 767px) {
-  .main .photo-gallery {
-    padding: 0 16px;
-  }
-}
 @media (min-width: 768px) {
-  .main .photo-gallery {
-    padding: 0 36px 36px 36px;
+  .main .format-container .photo-gallery {
+    padding-bottom: 36px;
   }
 }
-.main .photo-gallery__title {
+.main .format-container .photo-gallery__title {
   color: #323232;
 }
-.main .photo-gallery__container {
+.main .format-container .photo-gallery__container {
   display: flex;
 }
 @media (max-width: 767px) {
-  .main .photo-gallery__container {
+  .main .format-container .photo-gallery__container {
     flex-direction: column;
   }
 }
 @media (min-width: 768px) {
-  .main .photo-gallery__container {
+  .main .format-container .photo-gallery__container {
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
+    justify-content: space-between;
+    gap: 33px;
   }
 }
 @media (min-width: 768px) {
-  .main .photo-gallery__container .photo-gallery__item {
-    flex-basis: 300px;
+  .main .format-container .photo-gallery__container .photo-gallery__item {
+    flex-basis: 30%;
   }
 }
 @media (max-width: 767px) {
-  .main .photo-gallery__container .photo-gallery__item .photo-gallery__image {
+  .main .format-container .photo-gallery__container .photo-gallery__item .photo-gallery__image {
     margin-bottom: 16px;
   }
 }
 @media (min-width: 768px) {
-  .main .photo-gallery__container .photo-gallery__item .photo-gallery__image {
+  .main .format-container .photo-gallery__container .photo-gallery__item .photo-gallery__image {
     max-width: 100%;
-    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     vertical-align: middle;
-    border-radius: 5px;
   }
 }/*# sourceMappingURL=bio.css.map */
