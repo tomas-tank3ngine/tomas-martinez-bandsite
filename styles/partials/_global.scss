@@ -164,21 +164,39 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header{
     background-color: $color-primary-bandsite-black;
     display: flex;
-    //mobile only, change this direction for desktop
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include mobile-only{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @include tablet {
+        justify-content: flex-start;
+        align-items:baseline;
+        & > *{
+            margin-left: 32px;
+        }
+    }
+    
     @extend .headline-spacing;
     padding-bottom: 0;
 
     .navigation{
-        width: 100%;
+        @include mobile-only{
+            width: 100%;
+        }
+        
+        @include tablet{
+            
+        }
+
         &__ulist{
             display:flex;
             // justify-content: space-around;
             width: 100%;
             .navigation__item{
                 width: 50%;
+                margin-right: 32px;
                 
                 text-align: center;
                 @extend .subheader;
@@ -209,140 +227,183 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 .footer{
     background-color: $color-primary-bandsite-black;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: $color-primary-white;
-
-    @include mobile-only{
-        padding: 0 16px;
-    }
-
-    @include tablet{
-        padding: 0 36px;
-    }
-
-    .social-media{
+    // @include tablet{
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    // }
+    .footer-top{
+        @extend .margin-format;
         display: flex;
-        flex-direction: column;
-        // @extend .margin-format;
-        // todo media query here changes flex-direction to row for tablet+
-        &__title{
-            @extend .headline-spacing;
-            @extend .section-header;
-            color: $color-primary-white;
-        }
-
-        &__icon-container{
-            display: flex;
-            
-            .social-media__icon{
-                @include mobile-only{
-                    padding: 0 32px 16px 0px;
+        justify-content: space-between;
+        align-items:last baseline;
+        &__left-container{   
+            .social-media{
+                display: flex;
+                flex-direction: column;
+                // todo media query here changes flex-direction to row for tablet+
+                @include tablet{
+                    flex-direction: row;
+                    align-items: center;
                 }
-                .social-media__icon__link{
-                    .social-media__icon__image{
-
+                        
+                &__title{
+                @extend .headline-spacing;
+                @extend .section-header;
+                color: $color-primary-white;
+                margin-right: 32px;
+                }
+    
+                &__icon-container{
+                    display: flex;
+                    
+                    .social-media__icon{
+                        
+                        @include mobile-only{
+                            padding: 0 32px 16px 0px;
+                        }
+    
+                        @include tablet{
+                            padding: 0 32px 0 0;
+                        }
+                        .social-media__icon__link{
+                            .social-media__icon__image{
+                                height: 1.5em;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
 
-    .business-contacts{
+        &__right-container{
+            .footer-container-right{
+                width: auto;
+                
         
+                @include mobile-only{
+                    display: none;
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        @extend .margin-format;
         display: flex;
-        
-        @include mobile-only{
-            margin-bottom: 40px;
-            flex-direction: column;
-        }
-        @include tablet{
-            margin-bottom: 36px;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        &__contact-profile{
+        flex-direction: column;
+        .business-contacts{
+            display: flex;
+            
             @include mobile-only{
-                margin-bottom: 16px;
+                margin-bottom: 40px;
+                flex-direction: column;
             }
             @include tablet{
-                margin-bottom: 40px;
-                min-width: 30%;
+                margin-bottom: 36px;
+                flex-direction: row;
+                justify-content: space-between;
             }
-
-            .business-contacts__contact-group{
+            &__contact-profile{
                 @include mobile-only{
                     margin-bottom: 16px;
                 }
                 @include tablet{
-                    margin-bottom: 24px;
-                }
-                .business-contacts__name{
-                    @extend .footer-copy;
-                    font-weight: bold;
-                }
-        
-                .business-contacts__affiliation{
-                    @extend .footer-copy;
-                    font-weight: bold;
-                }
-                
-                .business-contacts__location-line-one{
-                    @extend .footer-copy;
+                    margin-bottom: 40px;
+                    min-width: 30%;
                 }
 
-                .business-contacts__location-line-two{
-                    @extend .footer-copy;
-                }
-
-                .business-contacts__email{
-                    @extend .footer-copy;
-                }
-            }
-        }
-    }
-
-    .copyright{
-        .copyright__text{
-            @extend .footer-copy;
-
-            @include mobile-only{
-                margin-bottom: 16px;
-            }
-
-            @include tablet{
-                margin-bottom: 36px;
-            }
-
+                .business-contacts__contact-group{
+                    @include mobile-only{
+                        margin-bottom: 16px;
+                    }
+                    @include tablet{
+                        margin-bottom: 24px;
+                    }
+                    .business-contacts__name{
+                        @extend .footer-copy;
+                        font-weight: bold;
+                    }
             
-        }
-    }
-}
+                    .business-contacts__affiliation{
+                        @extend .footer-copy;
+                        font-weight: bold;
+                    }
+                    
+                    .business-contacts__location-line-one{
+                        @extend .footer-copy;
+                    }
 
-.logo__container{
-    background-color: $color-primary-bandsite-black;
-    max-width: 120px;
-    max-height: 20px;
-    @include mobile-only{
-        margin-bottom: 16px;
-    }
-    
-    .logo__link{
-        
-        .logo{
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
+                    .business-contacts__location-line-two{
+                        @extend .footer-copy;
+                    }
 
-.logo__footer-container{
-    @extend .logo__container;   
-    
-    //min width of tablet, works for desktop as well
-    @include tablet{
+                    .business-contacts__email{
+                        @extend .footer-copy;
+                    }
+                }
+            }
+        }
+
+        .copyright{
+            .copyright__text{
+                @extend .footer-copy;
+
+                @include mobile-only{
+                    margin-bottom: 16px;
+                }
+
+                @include tablet{
+                    margin-bottom: 36px;
+                }
+
                 
+            }
+        }
+
+    }
+
+    .logo__container{
+        background-color: $color-primary-bandsite-black;
+        max-width: 120px;
+        max-height: 20px;
+        @include mobile-only{
+            margin-bottom: 16px;
+        }
+        
+        .logo__link{
+            
+            .logo{
+                // height: 100%;
+                // width: 100%;
+            }
+        }
+    }
+
+    //Only displays if not on mobile
+    
+}
+.logo__footer-container{
+    &--bottom{
+        @extend .logo__container;       
+        //min width of tablet, works for desktop as well
+        @include tablet{
+            display: none;
+        }
+    }
+    &--top{
+        
+        @extend .logo__container;
     }
 }
+// .logo__footer-container--left{
+//     @extend .logo__container;   
+    
+//     //min width of tablet, works for desktop as well
+//     @include tablet{
+        
+//     }
+// }

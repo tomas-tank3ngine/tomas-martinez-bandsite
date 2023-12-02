@@ -29,13 +29,13 @@
   }
 }
 
-.section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .social-media__title {
+.section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
   font-size: 36px;
   line-height: 44px;
   font-family: "Avenir-Bold";
 }
 @media (max-width: 767px) {
-  .section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .social-media__title {
+  .section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
     font-size: 24px;
     line-height: 32px;
     font-family: "Avenir-Bold";
@@ -68,13 +68,13 @@
   }
 }
 
-.footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
+.footer-copy, .footer .footer-bottom .copyright .copyright__text, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
   font-size: 14px;
   line-height: 20px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .footer-copy, .footer .copyright .copyright__text, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
+  .footer-copy, .footer .footer-bottom .copyright .copyright__text, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__email, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-two, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__location-line-one, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation, .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
@@ -94,27 +94,27 @@
   }
 }
 
-.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .social-media__title, .header {
+.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
   padding: 48px 0 36px 0;
 }
 @media (max-width: 767px) {
-  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .social-media__title, .header {
+  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
     padding: 24px 0 16px 0;
   }
 }
 
 @media (max-width: 767px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
     margin: 0 16px;
   }
 }
 @media (min-width: 768px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
     margin: 0 36px;
   }
 }
 @media (min-width: 1280px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery {
+  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
     margin: 0 36px;
   }
 }
@@ -152,13 +152,28 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header {
   background-color: #323232;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 0;
 }
-.header .navigation {
-  width: 100%;
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .header > * {
+    margin-left: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .header .navigation {
+    width: 100%;
+  }
 }
 .header .navigation__ulist {
   display: flex;
@@ -166,6 +181,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .header .navigation__ulist .navigation__item {
   width: 50%;
+  margin-right: 32px;
   text-align: center;
 }
 .header .navigation__ulist .navigation__item .navigation__link {
@@ -187,106 +203,126 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 .footer {
   background-color: #323232;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #FFFFFF;
 }
-@media (max-width: 767px) {
-  .footer {
-    padding: 0 16px;
-  }
+.footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
 }
-@media (min-width: 768px) {
-  .footer {
-    padding: 0 36px;
-  }
-}
-.footer .social-media {
+.footer .footer-top__left-container .social-media {
   display: flex;
   flex-direction: column;
 }
-.footer .social-media__title {
-  color: #FFFFFF;
+@media (min-width: 768px) {
+  .footer .footer-top__left-container .social-media {
+    flex-direction: row;
+    align-items: center;
+  }
 }
-.footer .social-media__icon-container {
+.footer .footer-top__left-container .social-media__title {
+  color: #FFFFFF;
+  margin-right: 32px;
+}
+.footer .footer-top__left-container .social-media__icon-container {
   display: flex;
 }
 @media (max-width: 767px) {
-  .footer .social-media__icon-container .social-media__icon {
+  .footer .footer-top__left-container .social-media__icon-container .social-media__icon {
     padding: 0 32px 16px 0px;
   }
 }
-.footer .business-contacts {
+@media (min-width: 768px) {
+  .footer .footer-top__left-container .social-media__icon-container .social-media__icon {
+    padding: 0 32px 0 0;
+  }
+}
+.footer .footer-top__left-container .social-media__icon-container .social-media__icon .social-media__icon__link .social-media__icon__image {
+  height: 1.5em;
+}
+.footer .footer-top__right-container .footer-container-right {
+  width: auto;
+}
+@media (max-width: 767px) {
+  .footer .footer-top__right-container .footer-container-right {
+    display: none;
+  }
+}
+.footer .footer-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer-bottom .business-contacts {
   display: flex;
 }
 @media (max-width: 767px) {
-  .footer .business-contacts {
+  .footer .footer-bottom .business-contacts {
     margin-bottom: 40px;
     flex-direction: column;
   }
 }
 @media (min-width: 768px) {
-  .footer .business-contacts {
+  .footer .footer-bottom .business-contacts {
     margin-bottom: 36px;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (max-width: 767px) {
-  .footer .business-contacts__contact-profile {
+  .footer .footer-bottom .business-contacts__contact-profile {
     margin-bottom: 16px;
   }
 }
 @media (min-width: 768px) {
-  .footer .business-contacts__contact-profile {
+  .footer .footer-bottom .business-contacts__contact-profile {
     margin-bottom: 40px;
     min-width: 30%;
   }
 }
 @media (max-width: 767px) {
-  .footer .business-contacts__contact-profile .business-contacts__contact-group {
+  .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group {
     margin-bottom: 16px;
   }
 }
 @media (min-width: 768px) {
-  .footer .business-contacts__contact-profile .business-contacts__contact-group {
+  .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group {
     margin-bottom: 24px;
   }
 }
-.footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
+.footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
   font-weight: bold;
 }
-.footer .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation {
+.footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation {
   font-weight: bold;
 }
 @media (max-width: 767px) {
-  .footer .copyright .copyright__text {
+  .footer .footer-bottom .copyright .copyright__text {
     margin-bottom: 16px;
   }
 }
 @media (min-width: 768px) {
-  .footer .copyright .copyright__text {
+  .footer .footer-bottom .copyright .copyright__text {
     margin-bottom: 36px;
   }
 }
-
-.logo__container, .logo__footer-container {
+.footer .logo__container, .footer .logo__footer-container--top, .footer .logo__footer-container--bottom {
   background-color: #323232;
   max-width: 120px;
   max-height: 20px;
 }
 @media (max-width: 767px) {
-  .logo__container, .logo__footer-container {
+  .footer .logo__container, .footer .logo__footer-container--top, .footer .logo__footer-container--bottom {
     margin-bottom: 16px;
   }
 }
-.logo__container .logo__link .logo, .logo__footer-container .logo__link .logo {
-  height: 100%;
-  width: 100%;
+@media (min-width: 768px) {
+  .logo__footer-container--bottom {
+    display: none;
+  }
 }
-
 .hero__section {
   position: relative;
   display: flex;
