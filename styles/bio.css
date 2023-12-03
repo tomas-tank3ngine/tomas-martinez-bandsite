@@ -94,11 +94,11 @@
   }
 }
 
-.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
+.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container .musicians-intro__quote, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
   padding: 48px 0 36px 0;
 }
 @media (max-width: 767px) {
-  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
+  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container .musicians-intro__quote, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
     padding: 24px 0 16px 0;
   }
 }
@@ -181,14 +181,18 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .header .navigation__ulist .navigation__item {
   width: 50%;
-  margin-right: 32px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .header .navigation__ulist .navigation__item {
+    margin-right: 32px;
+  }
 }
 .header .navigation__ulist .navigation__item .navigation__link {
   color: #E1E1E1;
   border-bottom: solid transparent 2px;
   display: block;
-  padding-bottom: 8px;
+  padding: 8px 0;
   width: 100%;
 }
 .header .navigation__ulist .navigation__item .navigation__link:hover {
@@ -268,7 +272,6 @@ p, h1, h2, h3, h4, h5, h6, li {
   .footer .footer-bottom .business-contacts {
     margin-bottom: 36px;
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 @media (max-width: 767px) {
@@ -279,7 +282,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 @media (min-width: 768px) {
   .footer .footer-bottom .business-contacts__contact-profile {
     margin-bottom: 40px;
-    min-width: 30%;
+    min-width: 244px;
   }
 }
 @media (max-width: 767px) {
@@ -356,10 +359,8 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .musicians-intro__title {
   color: #323232;
 }
-.main .musicians-intro__container {
-  padding-bottom: 0;
-}
 .main .musicians-intro__container .musicians-intro__quote {
+  padding-bottom: 16px;
   color: #323232;
 }
 .main .musicians-intro__container .musicians-intro__quote-author {

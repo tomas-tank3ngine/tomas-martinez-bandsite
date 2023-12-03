@@ -43,16 +43,16 @@
         }
 
         &__container{
-            @extend .headline-spacing;
-            padding-bottom: 0;
-
             .musicians-intro__quote{
                 @extend .subheader;
+                @extend .headline-spacing;
+                padding-bottom: 16px;
                 color: $color-primary-bandsite-black;
             }
 
             .musicians-intro__quote-author{
                 @extend .subheader;
+                
                 color: $color-primary-bandsite-black;
             }
         }
