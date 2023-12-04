@@ -18,11 +18,10 @@
     }
     .hero__title{
         position: absolute;
-        @include mobile-only{
-            padding-left: 16px;
-        }
+        padding-left: 1rem;
+        
         @include tablet{
-            padding-left: 36px;
+            padding-left: 2.25rem;
         }
 
         @include desktop{
@@ -34,7 +33,6 @@
 }
 
 .main{
-    
     .about__section-header{
         @extend .headline-spacing;
         @extend .section-header;
@@ -44,23 +42,18 @@
     .about{
         @extend .margin-format;
         @include tablet{
-            margin: 0 10vw 36px;
+            margin: 0 10vw 2.25rem;
         }
 
         @include desktop {
-            margin: 0 15vw 36px;
-        }
-        
-
-        &__image{
-
+            margin: 0 15vw 2.25rem;
         }
 
         &__quote-container{
             .about__quote{
                 @extend .subheader;
                 @extend .headline-spacing;
-                padding-bottom: 16px;
+                padding-bottom: 1rem;
                 color: $color-primary-bandsite-black;
             }
 
@@ -82,8 +75,10 @@
         &__bio-text-container{
             display: flex;
             justify-content: space-between;
-            @include mobile-only{
-                flex-direction: column;
+            flex-direction: column;
+            
+            @include tablet{
+                flex-direction: row;
             }
             
             .about__bio-text{
@@ -96,7 +91,7 @@
                 }
 
                 @include mobile-only{
-                    margin-bottom: 16px;
+                    margin-bottom: 1rem;
                 }
             }
         }
@@ -107,54 +102,42 @@
         background-color: $color-secondary-bandsite-alabaster;
 
         .photo-gallery{
-            @extend .margin-format;
-            // @include mobile-only{
-            //     padding-bottom: 16px;
-            // }
-    
+            @extend .margin-format;    
             @include tablet{
-                padding-bottom: 36px;
+                padding-bottom: 2.25rem;
             }
-    
+
             &__title{
                 @extend .headline-spacing;
                 @extend .section-header;
                 color: $color-primary-bandsite-black;
             }
-    
+            
             &__container{
                 display: flex;
-                @include mobile-only{
-                    flex-direction: column;
-                }
+                justify-content: center;
+                flex-direction: column;                
     
                 @include tablet{
+                    flex-direction: row;
                     width: 100%;
                     flex-wrap: wrap;
-                    justify-content: space-between;
-                    gap: 33px;
+                    gap: 2rem;
                 }
     
                 .photo-gallery__item{
                     @include tablet{
-                        
+                        flex-grow: 1;
                         flex-basis: 30%;
                     }                
                                 
                     .photo-gallery__image{
                         @include mobile-only{
-                            margin-bottom: 16px;
-                        }
-                        @include tablet{
-                            max-width: 100%;
-                            object-fit: cover;
-                            vertical-align: middle;
-                        }
-                        
+                            margin-bottom: 1rem;
+                        }                 
                     }
                 }  
-            }
-            
+            }            
         }
     }
 }
