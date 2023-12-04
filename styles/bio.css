@@ -373,6 +373,11 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .about__quote-container .about__quote-author {
   color: #323232;
 }
+@media (min-width: 768px) {
+  .main .about__quote-container .about__quote-author {
+    font-size: 1.2rem;
+  }
+}
 .main .about__bio-title {
   color: #000000;
 }
