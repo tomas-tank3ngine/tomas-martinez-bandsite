@@ -3,8 +3,8 @@
 
 @font-face {
     font-family: 'Avenir-Regular';
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTPro.ttf') format('truetype');
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+    src: url('/assets/fonts/AvenirNextLTPro.ttf') format('truetype');
+    src: url('/assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
     // src: url('/assets/fonts/AvenirNextLTPro-Regular.woff') format('woff');
     // src: url('/assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
     font-weight: 400;
@@ -12,8 +12,8 @@
 
 @font-face {
     font-family: 'Avenir-Demi';
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTProDemi.ttf') format('truetype');
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTPro-Demi.otf') format('opentype');
+    src: url('/assets/fonts/AvenirNextLTProDemi.ttf') format('truetype');
+    src: url('/assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
     // src: url('/assets/fonts/AvenirNextLTPro-Demi.woff') format('woff');
     // src: url('/assets/fonts/AvenirNextLTPro-Demi.woff2') format('woff2');
     font-weight: 600;
@@ -21,8 +21,8 @@
 
 @font-face {
     font-family: 'Avenir-Bold';
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTProBold.ttf') format('truetype');
-    src: url('/assets/fonts/Alternative-Fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+    src: url('/assets/fonts/AvenirNextLTProBold.ttf') format('truetype');
+    src: url('/assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
     // src: url('/assets/fonts/AvenirNextLTPro-Bold.woff') format('woff');
     // src: url('/assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
     font-weight: 700;
@@ -249,7 +249,7 @@ p, h1, h2, h3, h4, h5, h6, li {
         @extend .margin-format;
         display: flex;
         justify-content: space-between;
-        align-items:last baseline;
+        align-items:last center;
         &__left-container{   
             .social-media{
                 display: flex;
@@ -387,19 +387,15 @@ p, h1, h2, h3, h4, h5, h6, li {
         .logo__link{
             
             .logo{
-                // height: 100%;
-                // width: 100%;
+                
             }
         }
-    }
-
-    //Only displays if not on mobile
-    
+    }    
 }
+
 .logo__footer-container{
     &--bottom{
         @extend .logo__container;       
-        //min width of tablet, works for desktop as well
         @include tablet{
             display: none;
         }
@@ -409,11 +405,3 @@ p, h1, h2, h3, h4, h5, h6, li {
         @extend .logo__container;
     }
 }
-// .logo__footer-container--left{
-//     @extend .logo__container;   
-    
-//     //min width of tablet, works for desktop as well
-//     @include tablet{
-        
-//     }
-// }
