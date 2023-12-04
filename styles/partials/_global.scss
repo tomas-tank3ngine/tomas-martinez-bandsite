@@ -115,7 +115,7 @@
     }
 
     @include desktop {
-        margin: 0 36px;
+        margin: 0 10vw;
     }    
 }
 
@@ -164,10 +164,12 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header{
     background-color: $color-primary-bandsite-black;
     display: flex;
+    
     @include mobile-only{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 24px;
     }
     
     @include tablet {
@@ -176,10 +178,15 @@ p, h1, h2, h3, h4, h5, h6, li {
         & > *{
             margin-left: 32px;
         }
+
     }
-    
-    @extend .headline-spacing;
-    padding-bottom: 0;
+
+    @include desktop{
+        & > .logo__container{
+            margin-left: 10vw;
+        }
+        
+    }   
 
     .navigation{
         @include mobile-only{
@@ -207,7 +214,7 @@ p, h1, h2, h3, h4, h5, h6, li {
                     color: $color-secondary-bandsite-mercury;
                     border-bottom: solid transparent 2px;
                     display: block;
-                    padding: 8px 0;
+                    padding: 24px 0;
                     width: 100%;
 
                     &:hover{

@@ -19,10 +19,14 @@
     .hero__title{
         position: absolute;
         @include mobile-only{
-            padding: 0 16px;
+            padding-left: 16px;
         }
         @include tablet{
-            padding: 0 36px;
+            padding-left: 36px;
+        }
+
+        @include desktop{
+            padding-left: 10vw;
         }
         @extend .page-header;
         color: $color-primary-white;
@@ -30,50 +34,59 @@
 }
 
 .main{
-    .musicians-intro{
+    
+    .about__section-header{
+        @extend .headline-spacing;
+        @extend .section-header;
+        color: $color-primary-bandsite-black;
         @extend .margin-format;
-        &__title{
-            @extend .headline-spacing;
-            @extend .section-header;
-            color: $color-primary-bandsite-black;
+    }
+    .about{
+        @extend .margin-format;
+        @include tablet{
+            margin: 0 10vw 36px;
         }
+
+        @include desktop {
+            margin: 0 15vw 36px;
+        }
+        
 
         &__image{
 
         }
 
-        &__container{
-            .musicians-intro__quote{
+        &__quote-container{
+            .about__quote{
                 @extend .subheader;
                 @extend .headline-spacing;
                 padding-bottom: 16px;
                 color: $color-primary-bandsite-black;
             }
 
-            .musicians-intro__quote-author{
+            .about__quote-author{
                 @extend .subheader;
                 
                 color: $color-primary-bandsite-black;
             }
         }
-    }
-    
-    .bio{
-        @extend .margin-format;
-        &__title{
+
+        
+        // @extend .margin-format;
+        &__bio-title{
             @extend .headline-spacing;
             @extend .subheader;
             color: $color-secondary-bandsite-darkblack;
         }
 
-        &__text-container{
+        &__bio-text-container{
             display: flex;
             justify-content: space-between;
             @include mobile-only{
                 flex-direction: column;
             }
             
-            .bio__text{
+            .about__bio-text{
                 display: block;
                 @extend .body-copy;
                 color: $color-primary-bandsite-black;
@@ -87,6 +100,7 @@
                 }
             }
         }
+        
     }
     
     .format-container{

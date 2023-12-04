@@ -29,39 +29,39 @@
   }
 }
 
-.section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
+.section-header, .main .about__section-header, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
   font-size: 36px;
   line-height: 44px;
   font-family: "Avenir-Bold";
 }
 @media (max-width: 767px) {
-  .section-header, .main .musicians-intro__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
+  .section-header, .main .about__section-header, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
     font-size: 24px;
     line-height: 32px;
     font-family: "Avenir-Bold";
   }
 }
 
-.subheader, .main .musicians-intro__container .musicians-intro__quote, .main .musicians-intro__container .musicians-intro__quote-author, .main .bio__title, .header .navigation__ulist .navigation__item {
+.subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title, .header .navigation__ulist .navigation__item {
   font-size: 24px;
   line-height: 32px;
   font-family: "Avenir-Demi";
 }
 @media (max-width: 767px) {
-  .subheader, .main .musicians-intro__container .musicians-intro__quote, .main .musicians-intro__container .musicians-intro__quote-author, .main .bio__title, .header .navigation__ulist .navigation__item {
+  .subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title, .header .navigation__ulist .navigation__item {
     font-size: 14px;
     line-height: 22px;
     font-family: "Avenir-Demi";
   }
 }
 
-.body-copy, .main .bio__text-container .bio__text {
+.body-copy, .main .about__bio-text-container .about__bio-text {
   font-size: 14px;
   line-height: 22px;
   font-family: "Avenir-Regular";
 }
 @media (max-width: 767px) {
-  .body-copy, .main .bio__text-container .bio__text {
+  .body-copy, .main .about__bio-text-container .about__bio-text {
     font-size: 13px;
     line-height: 18px;
     font-family: "Avenir-Regular";
@@ -94,28 +94,28 @@
   }
 }
 
-.headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container .musicians-intro__quote, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
+.headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
   padding: 48px 0 36px 0;
 }
 @media (max-width: 767px) {
-  .headline-spacing, .main .musicians-intro__title, .main .musicians-intro__container .musicians-intro__quote, .main .bio__title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title, .header {
+  .headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .format-container .photo-gallery__title, .footer .footer-top__left-container .social-media__title {
     padding: 24px 0 16px 0;
   }
 }
 
 @media (max-width: 767px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
+  .margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
     margin: 0 16px;
   }
 }
 @media (min-width: 768px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
+  .margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
     margin: 0 36px;
   }
 }
 @media (min-width: 1280px) {
-  .margin-format, .main .musicians-intro, .main .bio, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
-    margin: 0 36px;
+  .margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .footer .footer-bottom, .footer .footer-top {
+    margin: 0 10vw;
   }
 }
 
@@ -152,13 +152,13 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header {
   background-color: #323232;
   display: flex;
-  padding-bottom: 0;
 }
 @media (max-width: 767px) {
   .header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 24px;
   }
 }
 @media (min-width: 768px) {
@@ -168,6 +168,11 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
   .header > * {
     margin-left: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .header > .logo__container, .header > .logo__footer-container--top, .header > .logo__footer-container--bottom {
+    margin-left: 10vw;
   }
 }
 @media (max-width: 767px) {
@@ -192,7 +197,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   color: #E1E1E1;
   border-bottom: solid transparent 2px;
   display: block;
-  padding: 8px 0;
+  padding: 24px 0;
   width: 100%;
 }
 .header .navigation__ulist .navigation__item .navigation__link:hover {
@@ -347,48 +352,63 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 @media (max-width: 767px) {
   .hero__section .hero__title {
-    padding: 0 16px;
+    padding-left: 16px;
   }
 }
 @media (min-width: 768px) {
   .hero__section .hero__title {
-    padding: 0 36px;
+    padding-left: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__section .hero__title {
+    padding-left: 10vw;
   }
 }
 
-.main .musicians-intro__title {
+.main .about__section-header {
   color: #323232;
 }
-.main .musicians-intro__container .musicians-intro__quote {
+@media (min-width: 768px) {
+  .main .about {
+    margin: 0 10vw 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .main .about {
+    margin: 0 15vw 36px;
+  }
+}
+.main .about__quote-container .about__quote {
   padding-bottom: 16px;
   color: #323232;
 }
-.main .musicians-intro__container .musicians-intro__quote-author {
+.main .about__quote-container .about__quote-author {
   color: #323232;
 }
-.main .bio__title {
+.main .about__bio-title {
   color: #000000;
 }
-.main .bio__text-container {
+.main .about__bio-text-container {
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 767px) {
-  .main .bio__text-container {
+  .main .about__bio-text-container {
     flex-direction: column;
   }
 }
-.main .bio__text-container .bio__text {
+.main .about__bio-text-container .about__bio-text {
   display: block;
   color: #323232;
 }
 @media (min-width: 768px) {
-  .main .bio__text-container .bio__text {
+  .main .about__bio-text-container .about__bio-text {
     max-width: 47%;
   }
 }
 @media (max-width: 767px) {
-  .main .bio__text-container .bio__text {
+  .main .about__bio-text-container .about__bio-text {
     margin-bottom: 16px;
   }
 }
