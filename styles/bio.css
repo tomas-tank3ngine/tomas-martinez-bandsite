@@ -46,13 +46,13 @@ p, h1, h2, h3, h4, h5, h6, li {
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
   font-weight: 700;
 }
-.page-header, .hero__section .hero__title {
+.page-header, .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir-Bold";
 }
 @media (min-width: 768px) {
-  .page-header, .hero__section .hero__title {
+  .page-header, .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir-Bold";
@@ -214,6 +214,37 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-weight: bold;
 }
 
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero__image {
+  width: 100%;
+}
+.hero__overlay {
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  align-items: center;
+  inset: 0;
+}
+.hero__title {
+  position: absolute;
+  padding-left: 1rem;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title {
+    padding-left: 10vw;
+  }
+}
+
 .footer {
   background-color: #323232;
   display: flex;
@@ -322,37 +353,6 @@ p, h1, h2, h3, h4, h5, h6, li {
     display: none;
   }
 }
-.hero__section {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.hero__section .hero__image {
-  width: 100%;
-}
-.hero__section .hero__overlay {
-  position: absolute;
-  background: rgba(50, 50, 50, 0.5);
-  display: flex;
-  align-items: center;
-  inset: 0;
-}
-.hero__section .hero__title {
-  position: absolute;
-  padding-left: 1rem;
-  color: #FFFFFF;
-}
-@media (min-width: 768px) {
-  .hero__section .hero__title {
-    padding-left: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__section .hero__title {
-    padding-left: 10vw;
-  }
-}
-
 .main .about__section-header {
   color: #323232;
 }
