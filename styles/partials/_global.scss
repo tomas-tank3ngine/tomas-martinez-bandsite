@@ -4,95 +4,92 @@
 @include remove-default-styling;
 
 @font-face {
-    font-family: 'Avenir-Regular';
+    font-family: 'Avenir';
     src: url('/assets/fonts/AvenirNextLTPro.ttf') format('truetype');
     src: url('/assets/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Avenir-Demi';
-    src: url('/assets/fonts/AvenirNextLTProDemi.ttf') format('truetype');
-    src: url('/assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Avenir-Bold';
-    src: url('/assets/fonts/AvenirNextLTProBold.ttf') format('truetype');
-    src: url('/assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
-    font-weight: 700;
 }
 
 // Extends
 .page-header{
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 700;
 
     @include tablet{
         font-size: 3.75rem;
         line-height: 4.25rem;
-        font-family: 'Avenir-Bold';
+        font-family: 'Avenir', Arial, sans-serif;
+        font-weight: 700;
     }
 }
 
 .section-header{
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 700;
 
     @include tablet{
         font-size: 2.25rem;
         line-height: 2.75rem;
-        font-family: 'Avenir-Bold';
+        font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 700;
     }
 }
 
 .subheader{
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: 'Avenir-Demi';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 600;
 
     @include tablet{
         font-size: 1.5rem;
         line-height: 2rem;
-        font-family: 'Avenir-Demi';
+        font-family: 'Avenir', Arial, sans-serif;
+        font-weight: 600;
     }
 }
 
 .body-copy{
     font-size: 0.813rem;
     line-height: 1.125rem;
-    font-family: 'Avenir-Regular';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 400;
     
     @include tablet{
         font-size: 0.875rem;
         line-height: 1.375rem;
-        font-family: 'Avenir-Regular';
+        font-family: 'Avenir', Arial, sans-serif;
+        font-weight: 400;
     }
 }
 
 .footer-copy{
     font-size: 0.813rem;
     line-height: 1.125rem;
-    font-family: 'Avenir-Regular';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 400;
     @include tablet{
         font-size: 0.875rem;
         line-height: 1.25rem;
-        font-family: 'Avenir-Regular';
+        font-family: 'Avenir', Arial, sans-serif;
+        font-weight: 400;
     }
 }
 
 .label-or-button{
     font-size: 0.75rem;
     line-height: 1.25rem;
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 700;
     
     @include mobile-only{
         font-size: 0.625rem;
         line-height: 1.25rem;
-        font-family: 'Avenir-Bold';
+        font-family: 'Avenir', Arial, sans-serif;
+        font-weight: 700;
     }
 }
 
