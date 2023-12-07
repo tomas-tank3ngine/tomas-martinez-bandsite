@@ -133,19 +133,29 @@
                 // justify-content: ;
                 .comments-section__headshot-container{
                     width: 15%;
+                    padding-top:2%;
+                    display: flex;
+                    justify-content: center;
                     // height: 100%;
                     
                     .comments-section__headshot--portrait{
                         position:relative;
                         overflow: hidden;
                         border-radius: 50%;
-                        width: 50px;
-                        height: 50px;
+                        width: 36px;
+                        height: 36px;
                         // background-image: url(/assets/images/Mohan-muruge.jpg);
+                        background-color: $color-secondary-bandsite-mercury;
                         background-size: cover;
+                        
+
+                        @include tablet{
+                            max-width: 48px;
+                            max-height: 48px;
+                        }
                         .comments-section__headshot{
                             height: 100%;
-                            width: auto;                            
+                            width: auto;                                      
                         }
                     }
                 }
@@ -153,37 +163,46 @@
                 .new-comment-form{
                     display: flex;
                     flex-direction: column;
-                    
+                    flex-grow: 1;
 
                     //Text areas
-                    &__name-area{
-                        
-                    }
-
-                    &__comment-area{
-                        
-                    }
-                    &__button-area{
-
-                    }
-
-                    //Found within the text areas (above)
-                    //flex not affected by new-comment-form
-                    &__field-title{
-                        @extend .label;
-                        text-transform: uppercase;
-                    }
-
-                    &__label{
-                        #full-name{
-
+                    .fieldset{
+                        // width: 100%;
+                    
+                        display: flex;
+                        flex-direction: column;
+                        //Found within the text areas (above)
+                        //flex not affected by new-comment-form
+                        &__title{
+                            @extend .label;
+                            text-transform: uppercase;
+                            width: 100%;
+                            font-weight: bold;
+                            // flex-grow: 1;
                         }
-                    }
 
-                    &__button{
-                        text-transform: uppercase;
-                        @extend .label;
-                        
+                        &__label{
+
+                           input, textarea{
+                            background-color: red;
+//todo
+                           }
+
+                            #full-name{
+
+                            }
+
+                            #comment-text{
+                                
+                            }
+                        }
+
+                        &__button{
+                            text-transform: uppercase;
+                            @extend .button;
+                            
+                            
+                        }
                     }
 
                 }

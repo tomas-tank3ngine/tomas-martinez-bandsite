@@ -108,19 +108,35 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.label, .main .format-container .comments-section__new-comment-container .new-comment-form__field-title, .main .format-container .comments-section__new-comment-container .new-comment-form__button, .button {
+.label, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .label, .main .format-container .comments-section__new-comment-container .new-comment-form__field-title, .main .format-container .comments-section__new-comment-container .new-comment-form__button, .button {
+  .label, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 700;
   }
+}
+
+.button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 32px;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+    min-width: 150px;
+  }
+}
+.button:hover, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button:hover {
+  background-color: #000000;
 }
 
 .headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .format-container .photo-gallery__title, .main .format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
@@ -455,14 +471,24 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .format-container .comments-section__new-comment-container .comments-section__headshot-container {
   width: 15%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
 }
 .main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
+  background-color: #E1E1E1;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+    max-width: 48px;
+    max-height: 48px;
+  }
 }
 .main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait .comments-section__headshot {
   height: 100%;
@@ -471,10 +497,20 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .format-container .comments-section__new-comment-container .new-comment-form {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form__field-title {
+.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset {
+  display: flex;
+  flex-direction: column;
+}
+.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title {
   text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form__button {
+.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
+  background-color: red;
+}
+.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
   text-transform: uppercase;
 }/*# sourceMappingURL=bio.css.map */

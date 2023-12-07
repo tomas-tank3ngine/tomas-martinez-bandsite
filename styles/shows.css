@@ -123,6 +123,22 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+.button {
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 32px;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .button {
+    min-width: 150px;
+  }
+}
+.button:hover {
+  background-color: #000000;
+}
+
 .headline-spacing, .footer .footer-top__left-container .social-media__title {
   padding: 1.5rem 0 1rem 0;
 }
