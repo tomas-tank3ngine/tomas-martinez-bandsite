@@ -34,7 +34,7 @@
         font-size: 2.25rem;
         line-height: 2.75rem;
         font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 700;
+        font-weight: 700;
     }
 }
 
@@ -79,18 +79,22 @@
     }
 }
 
-.label-or-button{
+.label{
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-family: 'Avenir', Arial, sans-serif;
+    font-weight: 700;    
+    
+    @include tablet{
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: 'Avenir', Arial, sans-serif;
     font-weight: 700;
-    
-    @include mobile-only{
-        font-size: 0.625rem;
-        line-height: 1.25rem;
-        font-family: 'Avenir', Arial, sans-serif;
-        font-weight: 700;
     }
+}
+
+.button{
+    @extend .label;
 }
 
 .headline-spacing{

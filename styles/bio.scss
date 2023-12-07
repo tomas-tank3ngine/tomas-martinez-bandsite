@@ -3,6 +3,7 @@
 @use "./partials/mixins" as *;
 
 .main{
+    
     .about__section-header{
         @extend .headline-spacing;
         @extend .section-header;
@@ -112,6 +113,76 @@
                     }
                 }  
             }            
+        }
+    }
+    .format-container{
+        .comments-section{
+            @extend .margin-format;    
+            @include tablet{
+                padding-bottom: 2.25rem;
+            }
+            &__title{
+                @extend .headline-spacing;
+                @extend .section-header;
+                color: $color-primary-bandsite-black;
+            }
+
+            &__new-comment-container{
+                display: flex;
+
+                // justify-content: ;
+                .comments-section__headshot-container{
+                    width: 15%;
+                    .comments-section__headshot{
+                        display: block;
+
+                    }
+                }
+                
+                .new-comment-form{
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 2;
+
+                    //Text areas
+                    &__name-area{
+                        
+                    }
+
+                    &__comment-area{
+                        
+                    }
+                    &__button-area{
+
+                    }
+
+                    //Found within the text areas (above)
+                    //flex not affected by new-comment-form
+                    &__field-title{
+                        @extend .label;
+                        text-transform: uppercase;
+                    }
+
+                    &__label{
+                        #full-name{
+
+                        }
+                    }
+
+                    &__button{
+                        text-transform: uppercase;
+                        @extend .label;
+                        
+                    }
+
+                }
+            }
+
+            &__container{
+                .comment-section__item{
+                
+                }
+            }
         }
     }
 }

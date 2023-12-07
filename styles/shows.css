@@ -108,15 +108,15 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.label-or-button {
-  font-size: 0.75rem;
+.label, .button {
+  font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
-@media (max-width: 767px) {
-  .label-or-button {
-    font-size: 0.625rem;
+@media (min-width: 768px) {
+  .label, .button {
+    font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 700;
