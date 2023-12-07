@@ -133,16 +133,27 @@
                 // justify-content: ;
                 .comments-section__headshot-container{
                     width: 15%;
-                    .comments-section__headshot{
-                        display: block;
-
+                    // height: 100%;
+                    
+                    .comments-section__headshot--portrait{
+                        position:relative;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        // background-image: url(/assets/images/Mohan-muruge.jpg);
+                        background-size: cover;
+                        .comments-section__headshot{
+                            height: 100%;
+                            width: auto;                            
+                        }
                     }
                 }
                 
                 .new-comment-form{
                     display: flex;
                     flex-direction: column;
-                    flex-grow: 2;
+                    
 
                     //Text areas
                     &__name-area{

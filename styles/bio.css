@@ -456,13 +456,21 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .format-container .comments-section__new-comment-container .comments-section__headshot-container {
   width: 15%;
 }
-.main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot {
-  display: block;
+.main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+.main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait .comments-section__headshot {
+  height: 100%;
+  width: auto;
 }
 .main .format-container .comments-section__new-comment-container .new-comment-form {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
 }
 .main .format-container .comments-section__new-comment-container .new-comment-form__field-title {
   text-transform: uppercase;
