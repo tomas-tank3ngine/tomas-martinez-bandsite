@@ -139,6 +139,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-color: #000000;
 }
 
+.headshot-container {
+  width: 15%;
+  padding-top: 40px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .headline-spacing, .footer .footer-top__left-container .social-media__title {
   padding: 1.5rem 0 1rem 0;
 }
