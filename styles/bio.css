@@ -78,27 +78,27 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::-moz-placeholder {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 400;
 }
 
-.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
+.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section__comments-container .comment-entry__container {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+  .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::-moz-placeholder {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 400;
   }
-  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
+  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section__comments-container .comment-entry__container {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -121,14 +121,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.label, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+.label, .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .label, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+  .label, .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -136,7 +136,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+.button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
   height: 40px;
   border-radius: 4px;
   padding: 0 32px;
@@ -144,11 +144,11 @@ p, h1, h2, h3, h4, h5, h6, li {
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
-  .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+  .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
     min-width: 150px;
   }
 }
-.button:hover, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button:hover {
+.button:hover, .main .comments-format-container .comments-section .new-comment__form .fieldset__button:hover {
   background-color: #000000;
 }
 
@@ -482,16 +482,16 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section__title {
   color: #323232;
 }
-.main .comments-format-container .comments-section__new-comment-container {
+.main .comments-format-container .comments-section .new-comment {
   display: flex;
 }
-.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container {
+.main .comments-format-container .comments-section .new-comment__headshot-container, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container {
   width: 15%;
   padding-top: 2%;
   display: flex;
   justify-content: center;
 }
-.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+.main .comments-format-container .comments-section .new-comment__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container .comments-section .new-comment__headshot-container .comment-entry__headshot-portrait, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .comment-entry__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .comment-entry__headshot-portrait {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -501,33 +501,37 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-size: cover;
 }
 @media (min-width: 768px) {
-  .main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+  .main .comments-format-container .comments-section .new-comment__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container .comments-section .new-comment__headshot-container .comment-entry__headshot-portrait, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .comment-entry__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .new-comment__headshot-portrait, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .comment-entry__headshot-portrait {
     max-width: 48px;
     max-height: 48px;
   }
 }
-.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait .comments-section__headshot {
+.main .comments-format-container .comments-section .new-comment__headshot-container .new-comment__headshot-portrait .new-comment__headshot, .main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container .comments-section .new-comment__headshot-container .comment-entry__headshot-portrait .new-comment__headshot, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .new-comment__headshot-portrait .new-comment__headshot, .main .comments-format-container .comments-section .comments-section__comments-container .comment-entry__headshot-container .comment-entry__headshot-portrait .new-comment__headshot, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .new-comment__headshot-portrait .new-comment__headshot, .main .comments-format-container .comments-section__comments-container .comments-section .comment-entry__headshot-container .comment-entry__headshot-portrait .new-comment__headshot {
   height: 100%;
   width: auto;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form {
+.main .comments-format-container .comments-section .new-comment__form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset {
+.main .comments-format-container .comments-section .new-comment__form .fieldset {
+  padding: 0;
+  border: none;
+  margin: 16px 0;
   display: flex;
   flex-direction: column;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__title {
   text-transform: uppercase;
   width: 100%;
   font-weight: bold;
+  color: #AFAFAF;
   padding: 0;
   margin: 0;
   line-height: unset;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
   width: 100%;
   min-height: 36px;
   border-radius: 4px;
@@ -536,23 +540,46 @@ p, h1, h2, h3, h4, h5, h6, li {
   border: 1px solid #E1E1E1;
 }
 @media (min-width: 768px) {
-  .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
+  .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
     min-height: 48px;
     padding: 16px;
   }
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::-moz-placeholder {
   color: #323232;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder {
   color: #323232;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input:active, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea:active {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input:active, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea:active {
   border-color: #323232;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input:invalid, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea:invalid {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input:invalid, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea:invalid {
   border-color: #D22D2D;
 }
-.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__button {
   text-transform: uppercase;
+}
+.main .comments-format-container .comments-section__comments-container {
+  display: flex;
+  flex-direction: column;
+}
+.main .comments-format-container .comments-section__comments-container .comment-entry {
+  display: flex;
+}
+.main .comments-format-container .comments-section__comments-container .comment-entry__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #323232;
+}
+.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info {
+  display: flex;
+  justify-content: space-between;
+}
+.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info .comment-entry__user-name {
+  padding: 8px 0;
+}
+.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info .comment-entry__timestamp {
+  color: #AFAFAF;
 }/*# sourceMappingURL=bio.css.map */

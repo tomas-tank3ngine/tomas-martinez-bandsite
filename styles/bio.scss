@@ -128,18 +128,18 @@
                 color: $color-primary-bandsite-black;
             }
 
-            &__new-comment-container{
+            .new-comment{
                 display: flex;
 
                 // justify-content: ;
-                .comments-section__headshot-container{
+                &__headshot-container{
                     width: 15%;
                     padding-top:2%;
                     display: flex;
                     justify-content: center;
                     // height: 100%;
                     
-                    .comments-section__headshot--portrait{
+                    .new-comment__headshot-portrait{
                         position:relative;
                         overflow: hidden;
                         border-radius: 50%;
@@ -154,31 +154,35 @@
                             max-width: 48px;
                             max-height: 48px;
                         }
-                        .comments-section__headshot{
+                        .new-comment__headshot{
                             height: 100%;
                             width: auto;                                      
                         }
                     }
                 }
                 
-                .new-comment-form{
+                &__form{
                     display: flex;
                     flex-direction: column;
                     flex-grow: 1;
 
                     //Text areas
                     .fieldset{
-                        // width: 100%;
-                    
+                        
+                        padding: 0;
+                        border: none;
+                        margin: 16px 0;
+
                         display: flex;
                         flex-direction: column;
                         //Found within the text areas (above)
                         //flex not affected by new-comment-form
                         &__title{
-                            @extend .label;
+                            @extend .body-copy;
                             text-transform: uppercase;
                             width: 100%;
                             font-weight: bold;
+                            color: $color-primary-silver;
                             padding: 0;
                             margin: 0;
                             line-height: unset;
@@ -194,6 +198,7 @@
                                 border-radius: 4px;
                                 padding: 12px;
                                 margin-top: 4px;
+                                
                                 border: 1px solid $color-secondary-bandsite-mercury;
                                 @extend .body-copy;
                                 @include tablet{
@@ -229,17 +234,50 @@
                         &__button{
                             text-transform: uppercase;
                             @extend .button;
-                            
-                            
                         }
                     }
-
                 }
             }
 
-            &__container{
-                .comment-section__item{
+            &__comments-container{
+                display: flex;
+                flex-direction: column;
+
+                .comment-entry{
+                    display: flex;
+
+                    &__headshot-container{
+                        @extend .new-comment__headshot-container;
+                        
+                        .comment-entry__headshot-portrait{
+                            @extend .new-comment__headshot-portrait;
+                        }
+                    }
                 
+                    &__container{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        @extend .body-copy;
+                        color: $color-primary-bandsite-black;
+                        .comment-entry__info{
+                            display: flex;
+                            justify-content: space-between;
+                            .comment-entry__user-name{
+                                padding: 8px 0;
+                            }
+
+                            .comment-entry__timestamp{
+                                color: $color-primary-silver;
+                            }
+                        }
+                        .comment-entry__comment{
+                            
+                            .comment-entry__text{
+
+                            }
+                        }
+                    }
                 }
             }
         }

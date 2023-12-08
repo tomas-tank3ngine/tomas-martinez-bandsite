@@ -115,14 +115,14 @@
         <div class="comments-format-container">
             <section class="comments-section">
                 <h2 class="comments-section__title">Join the Conversation</h2>
-                <section class="comments-section__new-comment-container">
-                    <div class="comments-section__headshot-container">
-                        <div class="comments-section__headshot--portrait">
-                            <img src="/assets/images/Mohan-muruge.jpg" alt="user headshot" class="comments-section__headshot">
+                <section class="new-comment">
+                    <div class="new-comment__headshot-container">
+                        <div class="new-comment__headshot-portrait">
+                            <img src="/assets/images/Mohan-muruge.jpg" alt="user headshot" class="new-comment__headshot">
                         </div>
-
                     </div>
-                    <form action="" class="new-comment-form">
+
+                    <form action="" class="new-comment__form">
                         
                         <fieldset class="fieldset">
                             <h3 class="fieldset__title">name</h3>
@@ -143,8 +143,28 @@
                         </fieldset>
                     </form>
                 </section>
-                <ul class="comments-section__container">
-                    <li class="comment-section__item"><p>comments</p></li>
+                <ul class="comments-section__comments-container">
+                    <li class="comment-entry">
+                        <div class="comment-entry__headshot-container">
+                            <div class="comment-entry__headshot-portrait"></div>
+                        </div>
+                        <!-- Comment -->
+                        <div class="comment-entry__container">
+                            <div class="comment-entry__info">
+                                <h3 class="comment-entry__user-name">Connor Walton</h3>
+                                <h3 class="comment-entry__timestamp">02/17/2021</h3>
+                            </div>
+
+                            <div class="comment-entry__comment">
+                                <p class="comment-entry__text">This is art. This is inexplicable magic expressed in the purest way, 
+                                    everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        hello
+                    </li>
                 </ul>
             </section>
         </div>
