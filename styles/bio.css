@@ -48,14 +48,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.section-header, .main .about__section-header, .main .format-container .photo-gallery__title, .main .format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
+.section-header, .main .about__section-header, .main .photo-gallery-format-container .photo-gallery__title, .main .comments-format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .section-header, .main .about__section-header, .main .format-container .photo-gallery__title, .main .format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
+  .section-header, .main .about__section-header, .main .photo-gallery-format-container .photo-gallery__title, .main .comments-format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -78,14 +78,27 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.body-copy, .main .about__bio-text-container .about__bio-text {
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  .body-copy, .main .about__bio-text-container .about__bio-text {
+  .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir", Arial, sans-serif;
+    font-weight: 400;
+  }
+  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -108,14 +121,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.label, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+.label, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .label, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+  .label, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title, .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -123,7 +136,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+.button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
   height: 40px;
   border-radius: 4px;
   padding: 0 32px;
@@ -131,33 +144,33 @@ p, h1, h2, h3, h4, h5, h6, li {
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
-  .button, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+  .button, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
     min-width: 150px;
   }
 }
-.button:hover, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button:hover {
+.button:hover, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button:hover {
   background-color: #000000;
 }
 
-.headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .format-container .photo-gallery__title, .main .format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
+.headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .photo-gallery-format-container .photo-gallery__title, .main .comments-format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
   padding: 1.5rem 0 1rem 0;
 }
 @media (min-width: 768px) {
-  .headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .format-container .photo-gallery__title, .main .format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
+  .headline-spacing, .main .about__section-header, .main .about__quote-container .about__quote, .main .about__bio-title, .main .photo-gallery-format-container .photo-gallery__title, .main .comments-format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
     padding: 3rem 0 2.25rem 0;
   }
 }
 
-.margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .main .format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
+.margin-format, .main .about__section-header, .main .about, .main .photo-gallery-format-container .photo-gallery, .main .comments-format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
   margin: 0 1rem;
 }
 @media (min-width: 768px) {
-  .margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .main .format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
+  .margin-format, .main .about__section-header, .main .about, .main .photo-gallery-format-container .photo-gallery, .main .comments-format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
     margin: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  .margin-format, .main .about__section-header, .main .about, .main .format-container .photo-gallery, .main .format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
+  .margin-format, .main .about__section-header, .main .about, .main .photo-gallery-format-container .photo-gallery, .main .comments-format-container .comments-section, .footer .footer-bottom, .footer .footer-top {
     margin: 0 10vw;
   }
 }
@@ -423,24 +436,24 @@ p, h1, h2, h3, h4, h5, h6, li {
     margin-bottom: 1rem;
   }
 }
-.main .format-container {
+.main .photo-gallery-format-container {
   background-color: #FAFAFA;
 }
 @media (min-width: 768px) {
-  .main .format-container .photo-gallery {
+  .main .photo-gallery-format-container .photo-gallery {
     padding-bottom: 2.25rem;
   }
 }
-.main .format-container .photo-gallery__title {
+.main .photo-gallery-format-container .photo-gallery__title {
   color: #323232;
 }
-.main .format-container .photo-gallery__container {
+.main .photo-gallery-format-container .photo-gallery__container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .main .format-container .photo-gallery__container {
+  .main .photo-gallery-format-container .photo-gallery__container {
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
@@ -448,34 +461,37 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 @media (min-width: 768px) {
-  .main .format-container .photo-gallery__container .photo-gallery__item {
+  .main .photo-gallery-format-container .photo-gallery__container .photo-gallery__item {
     flex-grow: 1;
     flex-basis: 30%;
   }
 }
 @media (max-width: 767px) {
-  .main .format-container .photo-gallery__container .photo-gallery__item .photo-gallery__image {
+  .main .photo-gallery-format-container .photo-gallery__container .photo-gallery__item .photo-gallery__image {
     margin-bottom: 1rem;
   }
 }
+.main .comments-format-container {
+  background-color: #FFFFFF;
+}
 @media (min-width: 768px) {
-  .main .format-container .comments-section {
+  .main .comments-format-container .comments-section {
     padding-bottom: 2.25rem;
   }
 }
-.main .format-container .comments-section__title {
+.main .comments-format-container .comments-section__title {
   color: #323232;
 }
-.main .format-container .comments-section__new-comment-container {
+.main .comments-format-container .comments-section__new-comment-container {
   display: flex;
 }
-.main .format-container .comments-section__new-comment-container .comments-section__headshot-container {
+.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container {
   width: 15%;
   padding-top: 2%;
   display: flex;
   justify-content: center;
 }
-.main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -485,32 +501,58 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-size: cover;
 }
 @media (min-width: 768px) {
-  .main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
+  .main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait {
     max-width: 48px;
     max-height: 48px;
   }
 }
-.main .format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait .comments-section__headshot {
+.main .comments-format-container .comments-section__new-comment-container .comments-section__headshot-container .comments-section__headshot--portrait .comments-section__headshot {
   height: 100%;
   width: auto;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form {
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset {
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset {
   display: flex;
   flex-direction: column;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__title {
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__title {
   text-transform: uppercase;
   width: 100%;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
+  line-height: unset;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
-  background-color: red;
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
+  width: 100%;
+  min-height: 36px;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 4px;
+  border: 1px solid #E1E1E1;
 }
-.main .format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
+@media (min-width: 768px) {
+  .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea {
+    min-height: 48px;
+    padding: 16px;
+  }
+}
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::-moz-placeholder {
+  color: #323232;
+}
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input::placeholder, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea::placeholder {
+  color: #323232;
+}
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input:active, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea:active {
+  border-color: #323232;
+}
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label input:invalid, .main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__label textarea:invalid {
+  border-color: #D22D2D;
+}
+.main .comments-format-container .comments-section__new-comment-container .new-comment-form .fieldset__button {
   text-transform: uppercase;
 }/*# sourceMappingURL=bio.css.map */

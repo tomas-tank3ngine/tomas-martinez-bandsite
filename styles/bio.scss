@@ -73,7 +73,7 @@
         
     }
     
-    .format-container{
+    .photo-gallery-format-container{
         background-color: $color-secondary-bandsite-alabaster;
 
         .photo-gallery{
@@ -115,7 +115,8 @@
             }            
         }
     }
-    .format-container{
+    .comments-format-container{
+        background-color: $color-primary-white;
         .comments-section{
             @extend .margin-format;    
             @include tablet{
@@ -178,15 +179,43 @@
                             text-transform: uppercase;
                             width: 100%;
                             font-weight: bold;
+                            padding: 0;
+                            margin: 0;
+                            line-height: unset;
                             // flex-grow: 1;
                         }
 
                         &__label{
 
-                           input, textarea{
-                            background-color: red;
-//todo
-                           }
+                            input, textarea{
+                                
+                                width: 100%;
+                                min-height: 36px;
+                                border-radius: 4px;
+                                padding: 12px;
+                                margin-top: 4px;
+                                border: 1px solid $color-secondary-bandsite-mercury;
+                                @extend .body-copy;
+                                @include tablet{
+                                    min-height: 48px;
+                                    padding: 16px;
+                                }
+
+
+                                &::placeholder{
+                                    color: $color-primary-bandsite-black;
+                                    @extend .body-copy;
+                                }
+
+                                &:active{
+                                    border-color: $color-primary-bandsite-black;
+                                }
+
+                                &:invalid{
+                                    border-color: $color-error;
+
+                                }
+                            }   
 
                             #full-name{
 
