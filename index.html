@@ -122,19 +122,19 @@
                         </div>
                     </div>
 
-                    <form action="" class="new-comment__form">
+                    <form id="new-comment__form" class="new-comment__form">
                         
                         <fieldset class="fieldset">
                             <h3 class="fieldset__title">name</h3>
                             <label for="full-name" class="fieldset__label">
-                                <input type="text" name="full-name" id="full-name" placeholder="Enter your name" required>
+                                <input type="text" name="fullName" id="full-name" placeholder="Enter your name" required>
                             </label>
                         </fieldset>
 
                         <fieldset class="fieldset">
                             <h3 class="fieldset__title">comment</h3>
                             <label for="comment-text" class="fieldset__label">
-                                <textarea type="text-area" name="comment-text" id="comment-text" placeholder="Add a new comment" required></textarea>
+                                <textarea type="text-area" name="commentText" id="comment-text" placeholder="Add a new comment" required></textarea>
                             </label>
                         </fieldset>
 
@@ -143,7 +143,7 @@
                         </fieldset>
                     </form>
                 </section>
-                <ul class="comments-section__comments-container">
+                <ul id="comments-section__comments-container" class="comments-section__comments-container">
                     <li class="comment-entry">
                         <div class="comment-entry__headshot-container">
                             <div class="comment-entry__headshot-portrait"></div>

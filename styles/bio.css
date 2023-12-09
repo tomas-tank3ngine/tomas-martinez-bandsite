@@ -565,7 +565,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .new-comment__form .fieldset__label input:active, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea:active {
   border-color: #323232;
 }
-.main .comments-format-container .comments-section .new-comment__form .fieldset__label input:invalid, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea:invalid {
+.main .comments-format-container .comments-section .new-comment__form .fieldset__label input:user-invalid, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea:user-invalid {
   border-color: #D22D2D;
 }
 .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
