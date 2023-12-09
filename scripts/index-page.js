@@ -1,8 +1,8 @@
 
 let comments = [
-    {name: "test1", timestamp: "time1", text: "text1"},
-    {name: "test2", timestamp: "time2", text: "tex2"},
-    {name: "test3", timestamp: "time3", text: "text3"}
+    {name: "Connor Walton", timestamp: "02/17/2021", text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
+    {name: "Emilie Beach", timestamp: "01/09/2021", text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
+    {name: "Miles Acosta", timestamp: "12/20/2020", text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
 ];
 
 // let commentObj = {
@@ -11,27 +11,18 @@ let comments = [
 //     text: 'comment text'
 // }
 
-//todo function for getting current time to put into createComment for timestamp
+function currentTimestamp(){
+    const date = new Date();
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    const currentDate = `${month}/${day}/${year}`;
+    return currentDate;
+}
 
 function createComment(comment){
-    //Comment Object Format Template
-//<li class="comment-entry">
-//  <div class="comment-entry__headshot-container">
-//      <div class="comment-entry__headshot-portrait"></div>
-//  </div>
-
-//  <div class="comment-entry__container">
-//      <div class="comment-entry__info">
-//          <h3 class="comment-entry__user-name">Connor Walton</h3>
-//          <h3 class="comment-entry__timestamp">02/17/2021</h3>
-//      </div>
-//
-//      <div class="comment-entry__comment">
-//          <p class="comment-entry__text"></p>
-//      </div>
-//  </div>
-//</li>
-
     const commentEl = document.createElement('li');
     commentEl.classList.add('comment-entry');
 
@@ -53,8 +44,12 @@ function createComment(comment){
     
     const commentEntryTimeEl = document.createElement('h3');
     commentEntryTimeEl.classList.add('comment-entry__time');
-    commentEntryTimeEl.innerText = comment.timestamp;
-
+    if (commentEntryTimeEl.innerText === null) {
+        commentEntryTimeEl.innerText = currentTimestamp();
+    }
+    else{
+        commentEntryTimeEl.innerText = comment.timestamp;
+    }
 
     const commentEntryCommentEl = document.createElement('div');
     commentEntryCommentEl.classList.add('comment-entry__comment');
@@ -80,23 +75,34 @@ function createComment(comment){
     return commentEl;
 }
 
+function renderComments() {
+    const commentsContainerEl = document.querySelector("#comments-section__comments-container")
+    commentsContainerEl.innerHTML ="";
+    comments.forEach(commentObj => {
+        const newComment = createComment(commentObj);
+        commentsContainerEl.appendChild(newComment);
+    });
+}
+
 function handleFormSubmit(event){
 
     event.preventDefault();
-    // console.log(event.target.fullName.value);
 
-    //create an object out of the values from event / form
+    //create an object using the values from event (submitting the form)
     const commentData = {
         name: event.target.fullName.value,
         timestamp: "2023/12/09",//todo make date automatic
-        text: event.target.commentText,
+        text: event.target.commentText.value,
     };
 
-    //put into the comments[] array (at the beginning - reverse, splice, or unshift)
+    //add new comment to beginning of existing comments array
+    comments.unshift(commentData);
+    
+    renderComments();
 
-    //Wipe the form
+    formEl.reset();
+
 }
-
 
 const formEl = document.getElementById("new-comment__form");
 formEl.addEventListener("submit", handleFormSubmit);
