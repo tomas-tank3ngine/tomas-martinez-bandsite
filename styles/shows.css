@@ -170,16 +170,16 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.padding-format, .hero__overlay {
+.padding-format, .hero__overlay, .main {
   padding: 0 1rem;
 }
 @media (min-width: 768px) {
-  .padding-format, .hero__overlay {
+  .padding-format, .hero__overlay, .main {
     padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  .padding-format, .hero__overlay {
+  .padding-format, .hero__overlay, .main {
     padding: 0 10vw;
   }
 }

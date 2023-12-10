@@ -69,3 +69,30 @@
         }
     }    
 }
+
+.main{
+    @extend .padding-format;
+    
+    .shows{
+
+        &__title{
+
+        }
+
+        &__container{
+
+            .show{
+
+                &__info{
+                    .show__info-header{
+
+                    }
+
+                    .show__info-item{
+
+                    }
+                }
+            }
+        }
+    }
+}
