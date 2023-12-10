@@ -33,14 +33,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   src: url("/assets/fonts/AvenirNextLTPro.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
-.page-header, .hero__title {
+.page-header, .hero__overlay .hero__band-info .hero__album-name {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .page-header, .hero__title {
+  .page-header, .hero__overlay .hero__band-info .hero__album-name {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -48,14 +48,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.section-header, .footer .footer-top__left-container .social-media__title {
+.section-header, .hero__overlay .hero__band-info .hero__band, .footer .footer-top__left-container .social-media__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .section-header, .footer .footer-top__left-container .social-media__title {
+  .section-header, .hero__overlay .hero__band-info .hero__band, .footer .footer-top__left-container .social-media__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -170,6 +170,28 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+.padding-format, .hero__overlay {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .padding-format, .hero__overlay {
+    padding: 0 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .padding-format, .hero__overlay {
+    padding: 0 10vw;
+  }
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid red;
+  width: 100%;
+  margin-left: 9%;
+  overflow: hidden;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -235,37 +257,6 @@ p, h1, h2, h3, h4, h5, h6, li {
   border-bottom: solid white 2px;
   color: #FFFFFF;
   font-weight: bold;
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.hero__image {
-  width: 100%;
-}
-.hero__overlay {
-  position: absolute;
-  background: rgba(50, 50, 50, 0.5);
-  display: flex;
-  align-items: center;
-  inset: 0;
-}
-.hero__title {
-  position: absolute;
-  padding-left: 1rem;
-  color: #FFFFFF;
-}
-@media (min-width: 768px) {
-  .hero__title {
-    padding-left: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__title {
-    padding-left: 10vw;
-  }
 }
 
 .footer {
@@ -374,5 +365,69 @@ p, h1, h2, h3, h4, h5, h6, li {
 @media (min-width: 768px) {
   .logo__footer-container--bottom {
     display: none;
+  }
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero__image {
+  width: 100%;
+}
+.hero__overlay {
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10vw;
+  padding-bottom: 15vw;
+}
+@media (min-width: 768px) {
+  .hero__overlay {
+    padding-right: 40%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__overlay {
+    padding: unset;
+    padding: 0 10vw;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero__overlay .hero__band-info {
+  width: 100%;
+  padding: 6vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  inset: 0;
+  flex-grow: 1;
+}
+@media (min-width: 1280px) {
+  .hero__overlay .hero__band-info {
+    flex-grow: 0;
+    width: 50%;
+  }
+}
+.hero__overlay .hero__band-info .hero__band {
+  color: #FFFFFF;
+}
+.hero__overlay .hero__band-info .hero__album-name {
+  line-height: unset;
+  color: #FFFFFF;
+}
+.hero__overlay .hero__song-container {
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .hero__overlay .hero__song-container {
+    height: 20%;
+    width: 50%;
   }
 }/*# sourceMappingURL=shows.css.map */

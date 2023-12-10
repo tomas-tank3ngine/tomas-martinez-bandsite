@@ -10,6 +10,36 @@
         color: $color-primary-bandsite-black;
         @extend .margin-format;
     }
+
+    .hero{
+        position: relative;
+        display: flex;
+        align-items: center;
+        &__image{
+            width: 100%;
+        }
+        &__overlay{
+            position: absolute;
+            background: rgba($color-primary-bandsite-black, 0.5);
+            display: flex;
+            align-items: center;
+            inset: 0;
+        }
+        &__title{
+            position: absolute;
+            padding-left: 1rem;
+            @include tablet{
+                padding-left: 2.25rem;
+            }
+    
+            @include desktop{
+                padding-left: 10vw;
+            }
+            @extend .page-header;
+            color: $color-primary-white;
+        }
+    }
+    
     .about{
         @extend .margin-format;
         background-color: $color-primary-white;
@@ -118,7 +148,8 @@
     .comments-format-container{
         background-color: $color-primary-white;
         .comments-section{
-            @extend .margin-format;    
+            @extend .margin-format;
+            border-bottom: 10px solid $color-secondary-bandsite-mercury;
             @include tablet{
                 padding-bottom: 2.25rem;
             }
@@ -241,7 +272,7 @@
                 }
             }
 
-            &__comments-container{
+            .comment-entry__container{
                 display: flex;
                 flex-direction: column;
 
@@ -278,7 +309,7 @@
                     &__container{
                         display: flex;
                         flex-direction: column;
-                        width: 100%;
+                        width: 85%;
                         @extend .body-copy;
                         color: $color-primary-bandsite-black;
                         .comment-entry__info{

@@ -1,3 +1,71 @@
 @use "./partials/global" as *;
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
+
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__image{
+        width: 100%;
+    }
+    &__overlay{
+        position: absolute;
+        background: rgba($color-primary-bandsite-black, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @extend .padding-format;
+        padding-top: 10vw;
+        padding-bottom: 15vw;
+        @include tablet{
+            padding-right: 40%;
+        }
+        @include desktop{
+            padding: unset;
+            padding: 0 10vw;
+            flex-direction: row;
+            align-items: center;
+        }
+        .hero__band-info{
+            width: 100%;
+            padding: 6vw 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: start;
+            inset: 0;
+            flex-grow: 1;
+
+            @include desktop{
+                flex-grow: 0;
+                width: 50%;               
+            }
+            
+            .hero__band{
+                @extend .section-header;
+                color: $color-primary-white;
+                
+            }
+            .hero__album-name{
+                @extend .page-header;
+                line-height: unset;
+                color: $color-primary-white;
+            }
+        }
+        .hero__song-container{
+            // overflow:hidden;
+            width: 100%;
+
+            @include desktop{
+                height: 20%;
+                width: 50%;
+            }
+            .hero__song{
+
+            }
+        }
+    }    
+}

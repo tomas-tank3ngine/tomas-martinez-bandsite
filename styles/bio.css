@@ -33,14 +33,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   src: url("/assets/fonts/AvenirNextLTPro.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
-.page-header, .hero__title {
+.page-header, .main .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .page-header, .hero__title {
+  .page-header, .main .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-weight: 400;
 }
 
-.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section__comments-container .comment-entry__container {
+.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
@@ -98,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6, li {
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 400;
   }
-  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section__comments-container .comment-entry__container {
+  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -183,6 +183,28 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+.padding-format {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .padding-format {
+    padding: 0 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .padding-format {
+    padding: 0 10vw;
+  }
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid red;
+  width: 100%;
+  margin-left: 9%;
+  overflow: hidden;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -248,37 +270,6 @@ p, h1, h2, h3, h4, h5, h6, li {
   border-bottom: solid white 2px;
   color: #FFFFFF;
   font-weight: bold;
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.hero__image {
-  width: 100%;
-}
-.hero__overlay {
-  position: absolute;
-  background: rgba(50, 50, 50, 0.5);
-  display: flex;
-  align-items: center;
-  inset: 0;
-}
-.hero__title {
-  position: absolute;
-  padding-left: 1rem;
-  color: #FFFFFF;
-}
-@media (min-width: 768px) {
-  .hero__title {
-    padding-left: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__title {
-    padding-left: 10vw;
-  }
 }
 
 .footer {
@@ -392,6 +383,36 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .about__section-header {
   color: #323232;
 }
+.main .hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main .hero__image {
+  width: 100%;
+}
+.main .hero__overlay {
+  position: absolute;
+  background: rgba(50, 50, 50, 0.5);
+  display: flex;
+  align-items: center;
+  inset: 0;
+}
+.main .hero__title {
+  position: absolute;
+  padding-left: 1rem;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .main .hero__title {
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main .hero__title {
+    padding-left: 10vw;
+  }
+}
 .main .about {
   background-color: #FFFFFF;
 }
@@ -482,6 +503,9 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container {
   background-color: #FFFFFF;
 }
+.main .comments-format-container .comments-section {
+  border-bottom: 10px solid #E1E1E1;
+}
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section {
     padding-bottom: 2.25rem;
@@ -571,22 +595,22 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
   text-transform: uppercase;
 }
-.main .comments-format-container .comments-section__comments-container {
+.main .comments-format-container .comments-section .comment-entry__container {
   display: flex;
   flex-direction: column;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry {
   display: flex;
   position: relative;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container {
   width: 15%;
   padding-top: 8px;
   padding-right: 16px;
   display: flex;
   justify-content: flex-end;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container .comment-entry__headshot-portrait {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container .comment-entry__headshot-portrait {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -596,26 +620,26 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-size: cover;
 }
 @media (min-width: 768px) {
-  .main .comments-format-container .comments-section__comments-container .comment-entry__headshot-container .comment-entry__headshot-portrait {
+  .main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container .comment-entry__headshot-portrait {
     max-width: 48px;
     max-height: 48px;
     width: 48px;
     height: 48px;
   }
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__container {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
   color: #323232;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info {
   display: flex;
   justify-content: space-between;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info .comment-entry__user-name {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__user-name {
   padding: 8px 0;
 }
-.main .comments-format-container .comments-section__comments-container .comment-entry__container .comment-entry__info .comment-entry__timestamp {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__timestamp {
   color: #AFAFAF;
 }/*# sourceMappingURL=bio.css.map */
