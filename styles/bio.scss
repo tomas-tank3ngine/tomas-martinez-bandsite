@@ -2,6 +2,35 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__image{
+        width: 100%;
+    }
+    &__overlay{
+        position: absolute;
+        background: rgba($color-primary-bandsite-black, 0.5);
+        display: flex;
+        align-items: center;
+        inset: 0;
+    }
+    &__title{
+        position: absolute;
+        padding-left: 1rem;
+        @include tablet{
+            padding-left: 2.25rem;
+        }
+
+        @include desktop{
+            padding-left: 10vw;
+        }
+        @extend .page-header;
+        color: $color-primary-white;
+    }
+}
+
 .main{
     
     .about__section-header{
@@ -9,35 +38,6 @@
         @extend .section-header;
         color: $color-primary-bandsite-black;
         @extend .margin-format;
-    }
-
-    .hero{
-        position: relative;
-        display: flex;
-        align-items: center;
-        &__image{
-            width: 100%;
-        }
-        &__overlay{
-            position: absolute;
-            background: rgba($color-primary-bandsite-black, 0.5);
-            display: flex;
-            align-items: center;
-            inset: 0;
-        }
-        &__title{
-            position: absolute;
-            padding-left: 1rem;
-            @include tablet{
-                padding-left: 2.25rem;
-            }
-    
-            @include desktop{
-                padding-left: 10vw;
-            }
-            @extend .page-header;
-            color: $color-primary-white;
-        }
     }
 
     .about{
@@ -70,7 +70,6 @@
         }
 
         
-        // @extend .margin-format;
         &__bio-title{
             @extend .headline-spacing;
             @extend .subheader;
@@ -92,7 +91,7 @@
                 color: $color-primary-bandsite-black;
 
                 @include tablet{
-                    max-width: 47%;//todo
+                    max-width: 47%;
                 }
 
                 @include mobile-only{
@@ -149,7 +148,7 @@
         background-color: $color-primary-white;
         .comments-section{
             @extend .margin-format;
-            border-bottom: 10px solid $color-secondary-bandsite-mercury;
+            padding-bottom: 16px;
             @include tablet{
                 padding-bottom: 2.25rem;
             }
@@ -158,18 +157,16 @@
                 @extend .section-header;
                 color: $color-primary-bandsite-black;
             }
+            
 
             .new-comment{
                 display: flex;
-
-                // justify-content: ;
+                border-bottom: $color-secondary-bandsite-mercury solid 1px;
                 &__headshot-container{
-                    width: 15%;
                     padding-top: 40px;
                     padding-right: 16px;
                     display: flex;
                     justify-content: flex-end;
-                    // height: 100%;
                     
                     .new-comment__headshot-portrait{
                         position:relative;
@@ -177,7 +174,6 @@
                         border-radius: 50%;
                         width: 36px;
                         height: 36px;
-                        // background-image: url(/assets/images/Mohan-muruge.jpg);
                         background-color: $color-secondary-bandsite-mercury;
                         background-size: cover;
 
@@ -198,8 +194,8 @@
                     display: flex;
                     flex-direction: column;
                     flex-grow: 1;
+                    
 
-                    //Text areas
                     .fieldset{
                         
                         padding: 0;
@@ -208,8 +204,6 @@
 
                         display: flex;
                         flex-direction: column;
-                        //Found within the text areas (above)
-                        //flex not affected by new-comment-form
                         &__title{
                             @extend .body-copy;
                             text-transform: uppercase;
@@ -253,14 +247,6 @@
 
                                 }
                             }   
-
-                            #full-name{
-
-                            }
-
-                            #comment-text{
-                                
-                            }
                         }
 
                         &__button{
@@ -278,14 +264,13 @@
                 .comment-entry{
                     display: flex;
                     position: relative;
+                    border-bottom: 1px $color-secondary-bandsite-mercury solid;
+                    padding: 8px 0;
 
                     &__headshot-container{
-                        width: 15%;
-                        padding-top: 8px;
                         padding-right: 16px;
                         display: flex;
-                        justify-content: flex-end;
-                        
+                        justify-content: flex-end;                       
                         
                         .comment-entry__headshot-portrait{
                             position:relative;
@@ -314,8 +299,9 @@
                         .comment-entry__info{
                             display: flex;
                             justify-content: space-between;
-                            .comment-entry__user-name{
-                                padding: 8px 0;
+                            align-items: flex-start;
+                            .comment-entry__name{
+                                padding-bottom: 8px;
                             }
 
                             .comment-entry__timestamp{
@@ -333,5 +319,9 @@
             }
         }
     }
+}
+
+.comment-section__container{
+    @extend .padding-format;
 }
 

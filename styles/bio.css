@@ -33,14 +33,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   src: url("/assets/fonts/AvenirNextLTPro.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
-.page-header, .main .hero__title {
+.page-header, .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .page-header, .main .hero__title {
+  .page-header, .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -137,15 +137,15 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 
 .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
-  height: 40px;
-  border-radius: 4px;
-  padding: 0 32px;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  padding: 0 2rem;
   background-color: #323232;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
-    min-width: 150px;
+    min-width: 9.375rem;
   }
 }
 .button:hover, .main .comments-format-container .comments-section .new-comment__form .fieldset__button:hover {
@@ -154,8 +154,8 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 .headshot-container {
   width: 15%;
-  padding-top: 40px;
-  padding-right: 16px;
+  padding-top: 2.5rem;
+  padding-right: 1rem;
   display: flex;
   justify-content: flex-end;
 }
@@ -183,16 +183,16 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.padding-format {
+.padding-format, .comment-section__container {
   padding: 0 1rem;
 }
 @media (min-width: 768px) {
-  .padding-format {
+  .padding-format, .comment-section__container {
     padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  .padding-format {
+  .padding-format, .comment-section__container {
     padding: 0 10vw;
   }
 }
@@ -203,7 +203,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 .hr {
   border: none;
-  border-top: 1px solid red;
+  border-top: 0.0625rem solid red;
   width: 100%;
   margin-left: 9%;
   overflow: hidden;
@@ -256,7 +256,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .header .navigation__ulist .navigation__item .navigation__link {
   color: #E1E1E1;
-  border-bottom: solid transparent 2px;
+  border-bottom: solid transparent 0.125rem;
   display: block;
   padding: 1rem;
   width: 100%;
@@ -267,11 +267,11 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 .header .navigation__ulist .navigation__item .navigation__link:hover {
-  border-bottom: solid white 2px;
+  border-bottom: solid white 0.125rem;
   color: #FFFFFF;
 }
 .header .navigation__ulist .navigation__item .navigation__link.active-page {
-  border-bottom: solid white 2px;
+  border-bottom: solid white 0.125rem;
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -384,38 +384,39 @@ p, h1, h2, h3, h4, h5, h6, li {
     display: none;
   }
 }
-.main .about__section-header {
-  color: #323232;
-}
-.main .hero {
+.hero {
   position: relative;
   display: flex;
   align-items: center;
 }
-.main .hero__image {
+.hero__image {
   width: 100%;
 }
-.main .hero__overlay {
+.hero__overlay {
   position: absolute;
   background: rgba(50, 50, 50, 0.5);
   display: flex;
   align-items: center;
   inset: 0;
 }
-.main .hero__title {
+.hero__title {
   position: absolute;
   padding-left: 1rem;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
-  .main .hero__title {
+  .hero__title {
     padding-left: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  .main .hero__title {
+  .hero__title {
     padding-left: 10vw;
   }
+}
+
+.main .about__section-header {
+  color: #323232;
 }
 .main .about {
   background-color: #FFFFFF;
@@ -508,7 +509,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-color: #FFFFFF;
 }
 .main .comments-format-container .comments-section {
-  border-bottom: 10px solid #E1E1E1;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section {
@@ -520,9 +521,9 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .comments-format-container .comments-section .new-comment {
   display: flex;
+  border-bottom: #E1E1E1 solid 1px;
 }
 .main .comments-format-container .comments-section .new-comment__headshot-container {
-  width: 15%;
   padding-top: 40px;
   padding-right: 16px;
   display: flex;
@@ -606,10 +607,10 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry {
   display: flex;
   position: relative;
+  border-bottom: 1px #E1E1E1 solid;
+  padding: 8px 0;
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container {
-  width: 15%;
-  padding-top: 8px;
   padding-right: 16px;
   display: flex;
   justify-content: flex-end;
@@ -640,9 +641,10 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
-.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__user-name {
-  padding: 8px 0;
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__name {
+  padding-bottom: 8px;
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__timestamp {
   color: #AFAFAF;

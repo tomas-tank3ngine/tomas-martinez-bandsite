@@ -46,10 +46,10 @@
             align-items: start;
             inset: 0;
             flex-grow: 1;
-            min-width: 275px;
+            min-width: 17.1875rem;
 
             @include tablet{
-                min-width: 525px;
+                min-width: 32.8125rem;
                 justify-content: center;
             }
 
@@ -60,31 +60,30 @@
             
             .hero__band{
                 @extend .section-header;
-                font-size: 16px;
+                font-size: 1rem;
                 font-weight: 100;
                 color: $color-primary-white;
-                padding-bottom: 16px;
+                padding-bottom: 1rem;
                 @include tablet{
-                    font-size: 25px;
-                    padding-bottom: 24px;
+                    font-size: 1.5625rem;
+                    padding-bottom: 1.5rem;
                 }
             }
             .hero__album-name{
                 @extend .page-header;
                 line-height: unset;
-                font-size: 28px;
-                padding-bottom: 16px;
+                font-size: 1.75rem;
+                padding-bottom: 1rem;
                 
                 color: $color-primary-white;
 
                 @include tablet{
-                    font-size: 60px;
-                    padding-bottom: 24px;
+                    font-size: 3.75rem;
+                    padding-bottom: 1.5rem;
                 }
             }
         }
         .hero__song-container{
-            // overflow:hidden;
             width: 100%;
             height: 40%;
 
@@ -108,12 +107,11 @@
 .main{
     @extend .padding-format;
     
-    .shows{
+    .shows-table{
         display: flex;
         flex-direction: column;
         padding-bottom: 2vw;
 
-        //FLEX ROW HERE FOR DESKTOP
         @include desktop{
             flex-direction: row;
             padding-top: 2vw;
@@ -134,48 +132,54 @@
             @include desktop{
                 flex-grow: 1;
             }
-            .shows-table{
-                // border-bottom: 1px solid $color-secondary-bandsite-mercury;
-                // border-bottom: 5px solid red;
+            .shows-table__headers{
+                display: none;
+                @include tablet{
+                    display: flex;
+                }
+
+                @include desktop{
+                    padding-top: 1.3125rem;
+                }
+                .shows-table__header {
+                    @extend .label;
+                    text-transform: uppercase;
+                    width: 100%;
+                    font-weight: bold;
+                    color: $color-primary-silver;
+                    padding: 0;
+                    margin: 0;
+                    line-height: unset;
+                    width: 25%;
+                }
+                
+            }
+
+            .show-item{
                 display: flex;
                 flex-direction: column;
+
+                &:hover{
+                    background-color: $color-secondary-bandsite-alabaster;
+                }
+                
+                &:focus{
+                    background-color: $color-secondary-bandsite-mercury;
+                }
 
                 @include tablet{
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-                }
+                }                
 
-                &__headers{
-                    display: none;
-                    @include tablet{
-                        display: flex;
-                    }
-
-                    @include desktop{
-                        padding-top: 21px;
-                    }
-                    .shows-table__header {
-                        @extend .label;
-                        text-transform: uppercase;
-                        width: 100%;
-                        font-weight: bold;
-                        color: $color-primary-silver;
-                        padding: 0;
-                        margin: 0;
-                        line-height: unset;
-                        width: 25%;
-                    }
-                    
-                }
-
-                &__info{
-                    margin: 16px 0;
+                .show-item__info{
+                    margin: 1rem 0;
                     @include tablet{
                         width: 25%;
                     }
 
-                    .shows-table__info-header{
+                    .show-item__info-header{
                         @extend .label;
                         text-transform: uppercase;
                         width: 100%;
@@ -190,17 +194,17 @@
                         }
                     }
 
-                    .shows-table__info-item{
+                    .show-item__info-text{
                         @extend .body-copy;
                         
                     }
-                    .shows-table__info-item.bold{
+                    .show-item__info-text.bold{
                         font-weight: bolder;
                     }
 
                     .button{
                         width: 100%;
-                        font-size: 16px;
+                        font-size: 1rem;
                     }
                 }
             }
@@ -208,13 +212,10 @@
     }
 }
 
-.break{
+.show-break{
     border-bottom: 1px solid $color-secondary-bandsite-mercury;
-    width: 110%;
-    text-align: center;
-    display: inline-block;
-    overflow-x:visible;
+    width: 104%;
+    overflow-x:hidden;
     position: relative;
-    right: 5%;
-
+    right: 2%;
 }

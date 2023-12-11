@@ -115,105 +115,103 @@
         <div class="comments-format-container">
             <section class="comments-section">
                 <h2 class="comments-section__title">Join the Conversation</h2>
-                <!-- <section class="comment-section__container"></section> -->
-                <section class="new-comment">
-                    <div class="new-comment__headshot-container">
-                        <div class="new-comment__headshot-portrait">
-                            <img src="/assets/images/Mohan-muruge.jpg" alt="user headshot" class="new-comment__headshot">
+                <section class="comment-section__container">
+                
+                    <section class="new-comment">
+                        <div class="new-comment__headshot-container">
+                            <div class="new-comment__headshot-portrait">
+                                <img src="/assets/images/Mohan-muruge.jpg" alt="user headshot" class="new-comment__headshot">
+                            </div>
                         </div>
-                    </div>
 
-                    <form id="new-comment__form" class="new-comment__form">
+                        <form id="new-comment__form" class="new-comment__form">
+                            
+                            <fieldset class="fieldset">
+                                <h3 class="fieldset__title">name</h3>
+                                <label for="fullName" class="fieldset__label">
+                                    <input type="text" name="fullName" id="full-name" placeholder="Enter your name" required>
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <h3 class="fieldset__title">comment</h3>
+                                <label for="commentText" class="fieldset__label">
+                                    <textarea type="text-area" name="commentText" id="comment-text" placeholder="Add a new comment" required></textarea>
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <button class="fieldset__button">Comment</button>
+                            </fieldset>                        
+                        </form>
                         
-                        <fieldset class="fieldset">
-                            <h3 class="fieldset__title">name</h3>
-                            <label for="fullName" class="fieldset__label">
-                                <input type="text" name="fullName" id="full-name" placeholder="Enter your name" required>
-                            </label>
-                        </fieldset>
+                    </section>
 
-                        <fieldset class="fieldset">
-                            <h3 class="fieldset__title">comment</h3>
-                            <label for="commentText" class="fieldset__label">
-                                <textarea type="text-area" name="commentText" id="comment-text" placeholder="Add a new comment" required></textarea>
-                            </label>
-                        </fieldset>
+                    <ul id="comments-section__comments-container" class="comment-entry__container">
+                        <li class="comment-entry">
+                            <div class="comment-entry__headshot-container">
+                                <div class="comment-entry__headshot-portrait"></div>
+                            </div>
+                            <div class="comment-entry__container">
+                                <div class="comment-entry__info">
+                                    <h3 class="comment-entry__name">Connor Walton</h3>
+                                    <h3 class="comment-entry__timestamp">02/17/2021</h3>
+                                </div>
 
-                        <fieldset class="fieldset">
-                            <button class="fieldset__button">Comment</button>
-                        </fieldset>                        
-                    </form>
-                    
+                                <div class="comment-entry__comment">
+                                    <p class="comment-entry__text">
+                                        This is art. This is inexplicable magic 
+                                        expressed in the purest way, 
+                                        everything that makes up this majestic 
+                                        work deserves reverence. Let us appreciate 
+                                        this for what it is and what it contains.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-entry">
+                            <div class="comment-entry__headshot-container">
+                                <div class="comment-entry__headshot-portrait"></div>
+                            </div>
+                            <div class="comment-entry__container">
+                                <div class="comment-entry__info">
+                                    <h3 class="comment-entry__user-name">Emilie Beach</h3>
+                                    <h3 class="comment-entry__timestamp">01/09/2021</h3>
+                                </div>
+
+                                <div class="comment-entry__comment">
+                                    <p class="comment-entry__text">
+                                        I feel blessed to have seen them in person. 
+                                        What a show! They were just perfection. If 
+                                        there was one day of my life I could relive, 
+                                        this would be it. What an incredible day.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="comment-entry">
+                            <div class="comment-entry__headshot-container">
+                                <div class="comment-entry__headshot-portrait"></div>
+                            </div>
+                            <div class="comment-entry__container">
+                                <div class="comment-entry__info">
+                                    <h3 class="comment-entry__user-name">Miles Acosta</h3>
+                                    <h3 class="comment-entry__timestamp">12/20/2020</h3>
+                                </div>
+
+                                <div class="comment-entry__comment">
+                                    <p class="comment-entry__text">
+                                        I can't stop listening. Every time I hear one of their 
+                                        songs - the vocals - it gives me goosebumps. Shivers straight 
+                                        down my spine. What a beautiful expression of creativity. 
+                                        Can't get enough.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
                 </section>
-                <!-- <hr class="hr"> -->
-                <ul id="comments-section__comments-container" class="comment-entry__container">
-                    <li class="comment-entry">
-                        <div class="comment-entry__headshot-container">
-                            <div class="comment-entry__headshot-portrait"></div>
-                        </div>
-                        <!-- Comment -->
-                        <div class="comment-entry__container">
-                            <div class="comment-entry__info">
-                                <h3 class="comment-entry__user-name">Connor Walton</h3>
-                                <h3 class="comment-entry__timestamp">02/17/2021</h3>
-                            </div>
-
-                            <div class="comment-entry__comment">
-                                <p class="comment-entry__text">
-                                    This is art. This is inexplicable magic 
-                                    expressed in the purest way, 
-                                    everything that makes up this majestic 
-                                    work deserves reverence. Let us appreciate 
-                                    this for what it is and what it contains.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="comment-entry">
-                        <div class="comment-entry__headshot-container">
-                            <div class="comment-entry__headshot-portrait"></div>
-                        </div>
-                        <!-- Comment -->
-                        <div class="comment-entry__container">
-                            <div class="comment-entry__info">
-                                <h3 class="comment-entry__user-name">Emilie Beach</h3>
-                                <h3 class="comment-entry__timestamp">01/09/2021</h3>
-                            </div>
-
-                            <div class="comment-entry__comment">
-                                <p class="comment-entry__text">
-                                    I feel blessed to have seen them in person. 
-                                    What a show! They were just perfection. If 
-                                    there was one day of my life I could relive, 
-                                    this would be it. What an incredible day.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="comment-entry">
-                        <div class="comment-entry__headshot-container">
-                            <div class="comment-entry__headshot-portrait"></div>
-                        </div>
-                        <!-- Comment -->
-                        <div class="comment-entry__container">
-                            <div class="comment-entry__info">
-                                <h3 class="comment-entry__user-name">Miles Acosta</h3>
-                                <h3 class="comment-entry__timestamp">12/20/2020</h3>
-                            </div>
-
-                            <div class="comment-entry__comment">
-                                <p class="comment-entry__text">
-                                    I can't stop listening. Every time I hear one of their 
-                                    songs - the vocals - it gives me goosebumps. Shivers straight 
-                                    down my spine. What a beautiful expression of creativity. 
-                                    Can't get enough.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                </ul>
-                <!-- </section> -->
             </section>
         </div>
             

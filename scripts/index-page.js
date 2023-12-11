@@ -5,16 +5,10 @@ let comments = [
     {name: "Miles Acosta", timestamp: "12/20/2020", text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
 ];
 
-// let commentObj = {
-//     name: 'commenter name',
-//     timestamp: 'time and date',
-//     text: 'comment text'
-// }
-
 function currentTimestamp(){
     const date = new Date();
 
-    const day = date.getDate();
+    const day = currentTimestampdate.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
