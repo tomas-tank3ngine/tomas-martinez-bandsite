@@ -39,7 +39,7 @@
             color: $color-primary-white;
         }
     }
-    
+
     .about{
         @extend .margin-format;
         background-color: $color-primary-white;
@@ -219,7 +219,6 @@
                             padding: 0;
                             margin: 0;
                             line-height: unset;
-                            // flex-grow: 1;
                         }
 
                         &__label{
