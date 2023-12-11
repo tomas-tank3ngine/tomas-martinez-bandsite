@@ -111,19 +111,31 @@
     .shows{
         display: flex;
         flex-direction: column;
+        padding-bottom: 2vw;
 
         //FLEX ROW HERE FOR DESKTOP
+        @include desktop{
+            flex-direction: row;
+            padding-top: 2vw;
+            justify-content: space-between;
+        }
 
         &__title{
             @extend .headline-spacing;
             @extend .section-header;
+            @include desktop{
+                padding-top: unset;
+                min-width: 20%;
+            }
             
         }
 
         &__container{
-
-            .show{
-                border-bottom: 1px solid $color-secondary-bandsite-mercury;
+            @include desktop{
+                flex-grow: 1;
+            }
+            .shows-table{
+                // border-bottom: 1px solid $color-secondary-bandsite-mercury;
                 // border-bottom: 5px solid red;
                 display: flex;
                 flex-direction: column;
@@ -134,11 +146,36 @@
                     align-items: center;
                 }
 
+                &__headers{
+                    display: none;
+                    @include tablet{
+                        display: flex;
+                    }
+
+                    @include desktop{
+                        padding-top: 21px;
+                    }
+                    .shows-table__header {
+                        @extend .label;
+                        text-transform: uppercase;
+                        width: 100%;
+                        font-weight: bold;
+                        color: $color-primary-silver;
+                        padding: 0;
+                        margin: 0;
+                        line-height: unset;
+                        width: 25%;
+                    }
+                    
+                }
+
                 &__info{
                     margin: 16px 0;
-                    width: 25%;
+                    @include tablet{
+                        width: 25%;
+                    }
 
-                    .show__info-header{
+                    .shows-table__info-header{
                         @extend .label;
                         text-transform: uppercase;
                         width: 100%;
@@ -153,11 +190,11 @@
                         }
                     }
 
-                    .show__info-item{
+                    .shows-table__info-item{
                         @extend .body-copy;
                         
                     }
-                    .show__info-item.bold{
+                    .shows-table__info-item.bold{
                         font-weight: bolder;
                     }
 
@@ -169,4 +206,15 @@
             }
         }
     }
+}
+
+.break{
+    border-bottom: 1px solid $color-secondary-bandsite-mercury;
+    width: 110%;
+    text-align: center;
+    display: inline-block;
+    overflow-x:visible;
+    position: relative;
+    right: 5%;
+
 }
