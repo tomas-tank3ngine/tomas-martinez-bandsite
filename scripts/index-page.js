@@ -1,5 +1,5 @@
 
-let comments = [
+const comments = [
     {name: "Connor Walton", timestamp: "02/17/2021", text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
     {name: "Emilie Beach", timestamp: "01/09/2021", text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
     {name: "Miles Acosta", timestamp: "12/20/2020", text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
@@ -8,7 +8,7 @@ let comments = [
 function currentTimestamp(){
     const date = new Date();
 
-    const day = currentTimestampdate.getDate();
+    const day = date.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
 
@@ -27,7 +27,7 @@ function createComment(comment){
     headshotPortraitEl.classList.add('comment-entry__headshot-portrait');
 
     const commentEntryContainerEl = document.createElement('div');
-    commentEntryContainerEl.classList.add('comment-entry__container');
+    commentEntryContainerEl.classList.add('comment-entry__comment-container');
 
     const commentEntryInfoEl = document.createElement('div');
     commentEntryInfoEl.classList.add('comment-entry__info');
@@ -37,13 +37,8 @@ function createComment(comment){
     commentEntryNameEl.innerText = comment.name;
     
     const commentEntryTimeEl = document.createElement('h3');
-    commentEntryTimeEl.classList.add('comment-entry__time');
-    if (commentEntryTimeEl.innerText === null) {
-        commentEntryTimeEl.innerText = currentTimestamp();
-    }
-    else{
-        commentEntryTimeEl.innerText = comment.timestamp;
-    }
+    commentEntryTimeEl.classList.add('comment-entry__timestamp');
+    commentEntryTimeEl.innerText = comment.timestamp;
 
     const commentEntryCommentEl = document.createElement('div');
     commentEntryCommentEl.classList.add('comment-entry__comment');
@@ -70,7 +65,7 @@ function createComment(comment){
 }
 
 function renderComments() {
-    const commentsContainerEl = document.querySelector("#comments-section__comments-container")
+    const commentsContainerEl = document.querySelector(".comment-entry__container")
     commentsContainerEl.innerHTML ="";
     comments.forEach(commentObj => {
         const newComment = createComment(commentObj);
@@ -85,7 +80,7 @@ function handleFormSubmit(event){
     //create an object using the values from event (submitting the form)
     const commentData = {
         name: event.target.fullName.value,
-        timestamp: "2023/12/09",//todo make date automatic
+        timestamp: currentTimestamp(),
         text: event.target.commentText.value,
     };
 
@@ -98,5 +93,6 @@ function handleFormSubmit(event){
 
 }
 
-const formEl = document.getElementById("new-comment__form");
+// const formEl = document.getElementById("new-comment__form");
+const formEl = document.querySelector(".new-comment__form");
 formEl.addEventListener("submit", handleFormSubmit);

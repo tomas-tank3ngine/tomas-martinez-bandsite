@@ -63,14 +63,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.subheader, .header .navigation__ulist .navigation__item {
+.subheader {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 600;
 }
 @media (min-width: 768px) {
-  .subheader, .header .navigation__ulist .navigation__item {
+  .subheader {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -78,14 +78,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.body-copy, .main .shows-table__container .show-item .show-item__info .show-item__info-text {
+.body-copy, .main .shows-table__container .show-item .show-item__info .show-item__info-text, .header .navigation__ulist .navigation__item {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  .body-copy, .main .shows-table__container .show-item .show-item__info .show-item__info-text {
+  .body-copy, .main .shows-table__container .show-item .show-item__info .show-item__info-text, .header .navigation__ulist .navigation__item {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -129,10 +129,12 @@ p, h1, h2, h3, h4, h5, h6, li {
   padding: 0 2rem;
   background-color: #323232;
   color: #FFFFFF;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .button {
     min-width: 9.375rem;
+    width: 10%;
   }
 }
 .button:hover {
@@ -170,17 +172,26 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.padding-format, .hero__overlay, .main {
+.padding-format, .hero__overlay, .main .shows-table__title {
   padding: 0 1rem;
 }
 @media (min-width: 768px) {
-  .padding-format, .hero__overlay, .main {
+  .padding-format, .hero__overlay, .main .shows-table__title {
     padding: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  .padding-format, .hero__overlay, .main {
+  .padding-format, .hero__overlay, .main .shows-table__title {
     padding: 0 10vw;
+  }
+}
+
+.show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
+    padding: 0 2.25rem;
   }
 }
 
@@ -474,18 +485,25 @@ p, h1, h2, h3, h4, h5, h6, li {
   display: flex;
   flex-direction: column;
   padding-bottom: 2vw;
+  padding-top: 2vw;
 }
 @media (min-width: 1280px) {
   .main .shows-table {
     flex-direction: row;
-    padding-top: 2vw;
     justify-content: space-between;
+  }
+}
+.main .shows-table__title {
+  margin: 1.5rem 0;
+}
+@media (min-width: 1280px) {
+  .main .shows-table__title {
+    min-width: 20%;
   }
 }
 @media (min-width: 1280px) {
   .main .shows-table__title {
-    padding-top: unset;
-    min-width: 20%;
+    margin-top: 0;
   }
 }
 @media (min-width: 1280px) {
@@ -519,6 +537,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .shows-table__container .show-item {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #E1E1E1;
 }
 .main .shows-table__container .show-item:hover {
   background-color: #FAFAFA;

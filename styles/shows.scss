@@ -105,25 +105,30 @@
 }
 
 .main{
-    @extend .padding-format;
+    
     
     .shows-table{
         display: flex;
         flex-direction: column;
         padding-bottom: 2vw;
+        padding-top: 2vw;
 
         @include desktop{
-            flex-direction: row;
-            padding-top: 2vw;
+            flex-direction: row;            
             justify-content: space-between;
         }
 
         &__title{
             @extend .headline-spacing;
+            @extend .padding-format;
             @extend .section-header;
+            margin: 1.5rem 0;
             @include desktop{
-                padding-top: unset;
                 min-width: 20%;
+            }
+
+            @include desktop{
+                margin-top: 0;
             }
             
         }
@@ -134,6 +139,7 @@
             }
             .shows-table__headers{
                 display: none;
+                @extend .show-list-padding-format;
                 @include tablet{
                     display: flex;
                 }
@@ -142,7 +148,7 @@
                     padding-top: 1.3125rem;
                 }
                 .shows-table__header {
-                    @extend .label;
+                    @extend .label;                    
                     text-transform: uppercase;
                     width: 100%;
                     font-weight: bold;
@@ -158,6 +164,8 @@
             .show-item{
                 display: flex;
                 flex-direction: column;
+                @extend .show-list-padding-format;
+                border-bottom: 1px solid $color-secondary-bandsite-mercury;
 
                 &:hover{
                     background-color: $color-secondary-bandsite-alabaster;
@@ -212,6 +220,7 @@
     }
 }
 
+//NOT USED
 .show-break{
     border-bottom: 1px solid $color-secondary-bandsite-mercury;
     width: 104%;

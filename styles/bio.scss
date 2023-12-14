@@ -148,7 +148,7 @@
         background-color: $color-primary-white;
         .comments-section{
             @extend .margin-format;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             @include tablet{
                 padding-bottom: 2.25rem;
             }
@@ -163,8 +163,8 @@
                 display: flex;
                 border-bottom: $color-secondary-bandsite-mercury solid 1px;
                 &__headshot-container{
-                    padding-top: 40px;
-                    padding-right: 16px;
+                    padding-top: 2.5rem;
+                    padding-right: 1rem;
                     display: flex;
                     justify-content: flex-end;
                     
@@ -172,16 +172,16 @@
                         position:relative;
                         overflow: hidden;
                         border-radius: 50%;
-                        width: 36px;
-                        height: 36px;
+                        width: 2.25rem;
+                        height: 2.25rem;
                         background-color: $color-secondary-bandsite-mercury;
                         background-size: cover;
 
                         @include tablet{
-                            max-width: 48px;
-                            max-height: 48px;
-                            width: 48px;
-                            height: 48px;
+                            max-width: 3rem;
+                            max-height: 3rem;
+                            width: 3rem;
+                            height: 3rem;
                         }
                         .new-comment__headshot{
                             height: 100%;
@@ -200,7 +200,7 @@
                         
                         padding: 0;
                         border: none;
-                        margin: 16px 0;
+                        margin: 1rem 0;
 
                         display: flex;
                         flex-direction: column;
@@ -220,16 +220,16 @@
                             input, textarea{
                                 
                                 width: 100%;
-                                min-height: 36px;
-                                border-radius: 4px;
-                                padding: 12px;
-                                margin-top: 4px;
+                                min-height: 2.25rem;
+                                border-radius: 0.25rem;
+                                padding: 0.75rem;
+                                margin-top: 0.25rem;
                                 
                                 border: 1px solid $color-secondary-bandsite-mercury;
                                 @extend .body-copy;
                                 @include tablet{
-                                    min-height: 48px;
-                                    padding: 16px;
+                                    min-height: 3rem;
+                                    padding: 1rem;
                                 }
 
 
@@ -251,6 +251,7 @@
 
                         &__button{
                             text-transform: uppercase;
+                            align-self: flex-end;
                             @extend .button;
                         }
                     }
@@ -265,10 +266,10 @@
                     display: flex;
                     position: relative;
                     border-bottom: 1px $color-secondary-bandsite-mercury solid;
-                    padding: 8px 0;
+                    padding: 0.5rem 0;
 
                     &__headshot-container{
-                        padding-right: 16px;
+                        padding-right: 1rem;
                         display: flex;
                         justify-content: flex-end;                       
                         
@@ -276,24 +277,24 @@
                             position:relative;
                             overflow: hidden;
                             border-radius: 50%;
-                            width: 36px;
-                            height: 36px;
+                            width: 2.25rem;
+                            height: 2.25rem;
                             background-color: $color-secondary-bandsite-mercury;
                             background-size: cover;
     
                             @include tablet{
-                                max-width: 48px;
-                                max-height: 48px;
-                                width: 48px;
-                                height: 48px;
+                                max-width: 3rem;
+                                max-height: 3rem;
+                                width: 3rem;
+                                height: 3rem;
                             }
                         }
                     }
                 
-                    &__container{
+                    .comment-entry__comment-container{
                         display: flex;
                         flex-direction: column;
-                        width: 85%;
+                        width: 100%;
                         @extend .body-copy;
                         color: $color-primary-bandsite-black;
                         .comment-entry__info{
@@ -301,11 +302,12 @@
                             justify-content: space-between;
                             align-items: flex-start;
                             .comment-entry__name{
-                                padding-bottom: 8px;
+                                padding-bottom: 0.5rem;
                             }
 
                             .comment-entry__timestamp{
                                 color: $color-primary-silver;
+                                font-weight: unset;
                             }
                         }
                         .comment-entry__comment{

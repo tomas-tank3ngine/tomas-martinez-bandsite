@@ -63,14 +63,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title, .header .navigation__ulist .navigation__item {
+.subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir", Arial, sans-serif;
   font-weight: 600;
 }
 @media (min-width: 768px) {
-  .subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title, .header .navigation__ulist .navigation__item {
+  .subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-weight: 400;
 }
 
-.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
+.body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container, .header .navigation__ulist .navigation__item {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir", Arial, sans-serif;
@@ -98,7 +98,7 @@ p, h1, h2, h3, h4, h5, h6, li {
     font-family: "Avenir", Arial, sans-serif;
     font-weight: 400;
   }
-  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
+  .body-copy, .main .about__bio-text-container .about__bio-text, .main .comments-format-container .comments-section .new-comment__form .fieldset__title, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea, .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::placeholder, .main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container, .header .navigation__ulist .navigation__item {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir", Arial, sans-serif;
@@ -142,10 +142,12 @@ p, h1, h2, h3, h4, h5, h6, li {
   padding: 0 2rem;
   background-color: #323232;
   color: #FFFFFF;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
     min-width: 9.375rem;
+    width: 10%;
   }
 }
 .button:hover, .main .comments-format-container .comments-section .new-comment__form .fieldset__button:hover {
@@ -194,6 +196,15 @@ p, h1, h2, h3, h4, h5, h6, li {
 @media (min-width: 1280px) {
   .padding-format, .comment-section__container {
     padding: 0 10vw;
+  }
+}
+
+.show-list-padding-format {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .show-list-padding-format {
+    padding: 0 2.25rem;
   }
 }
 
@@ -509,7 +520,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-color: #FFFFFF;
 }
 .main .comments-format-container .comments-section {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section {
@@ -524,8 +535,8 @@ p, h1, h2, h3, h4, h5, h6, li {
   border-bottom: #E1E1E1 solid 1px;
 }
 .main .comments-format-container .comments-section .new-comment__headshot-container {
-  padding-top: 40px;
-  padding-right: 16px;
+  padding-top: 2.5rem;
+  padding-right: 1rem;
   display: flex;
   justify-content: flex-end;
 }
@@ -533,17 +544,17 @@ p, h1, h2, h3, h4, h5, h6, li {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #E1E1E1;
   background-size: cover;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section .new-comment__headshot-container .new-comment__headshot-portrait {
-    max-width: 48px;
-    max-height: 48px;
-    width: 48px;
-    height: 48px;
+    max-width: 3rem;
+    max-height: 3rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .main .comments-format-container .comments-section .new-comment__headshot-container .new-comment__headshot-portrait .new-comment__headshot {
@@ -558,7 +569,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .new-comment__form .fieldset {
   padding: 0;
   border: none;
-  margin: 16px 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -573,16 +584,16 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
   width: 100%;
-  min-height: 36px;
-  border-radius: 4px;
-  padding: 12px;
-  margin-top: 4px;
+  min-height: 2.25rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
   border: 1px solid #E1E1E1;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
-    min-height: 48px;
-    padding: 16px;
+    min-height: 3rem;
+    padding: 1rem;
   }
 }
 .main .comments-format-container .comments-section .new-comment__form .fieldset__label input::-moz-placeholder, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea::-moz-placeholder {
@@ -599,6 +610,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
   text-transform: uppercase;
+  align-self: flex-end;
 }
 .main .comments-format-container .comments-section .comment-entry__container {
   display: flex;
@@ -608,10 +620,10 @@ p, h1, h2, h3, h4, h5, h6, li {
   display: flex;
   position: relative;
   border-bottom: 1px #E1E1E1 solid;
-  padding: 8px 0;
+  padding: 0.5rem 0;
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container {
-  padding-right: 16px;
+  padding-right: 1rem;
   display: flex;
   justify-content: flex-end;
 }
@@ -619,33 +631,34 @@ p, h1, h2, h3, h4, h5, h6, li {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   background-color: #E1E1E1;
   background-size: cover;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container .comment-entry__headshot-portrait {
-    max-width: 48px;
-    max-height: 48px;
-    width: 48px;
-    height: 48px;
+    max-width: 3rem;
+    max-height: 3rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
-.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 100%;
   color: #323232;
 }
-.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container .comment-entry__info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__name {
-  padding-bottom: 8px;
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container .comment-entry__info .comment-entry__name {
+  padding-bottom: 0.5rem;
 }
-.main .comments-format-container .comments-section .comment-entry__container .comment-entry__container .comment-entry__info .comment-entry__timestamp {
+.main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container .comment-entry__info .comment-entry__timestamp {
   color: #AFAFAF;
+  font-weight: unset;
 }/*# sourceMappingURL=bio.css.map */

@@ -122,9 +122,9 @@ function createShowsSection() {
         buttonEl.type = "submit";
         buttonHolderEl.appendChild(buttonEl);
 
-        const breakEl = document.createElement("li");
-        breakEl.classList.add("show-break");
-        shows__containerEl.appendChild(breakEl);
+        // const breakEl = document.createElement("li");
+        // breakEl.classList.add("show-break");
+        // shows__containerEl.appendChild(breakEl);
 
     });
 }
