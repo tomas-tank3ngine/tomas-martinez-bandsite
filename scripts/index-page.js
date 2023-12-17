@@ -1,6 +1,7 @@
-import jsFile from "./band-site-api.js";
+import {api_key, BandSiteApi} from "./band-site-api.js";
 
-console.log(jsFile)
+const tester = new BandSiteApi(api_key);
+console.log("Key is: "+ tester.apiKey)
 
 const comments = [
     {name: "Connor Walton", timestamp: "02/17/2021", text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
@@ -37,11 +38,11 @@ function createComment(comment){
     
     const commentEntryNameEl = document.createElement('h3');
     commentEntryNameEl.classList.add('comment-entry__name');
-    commentEntryNameEl.innerText = comment.name;
+    commentEntryNameEl.innerText = comment.name;//----------------------------------------------
     
     const commentEntryTimeEl = document.createElement('h3');
     commentEntryTimeEl.classList.add('comment-entry__timestamp');
-    commentEntryTimeEl.innerText = comment.timestamp;
+    commentEntryTimeEl.innerText = comment.timestamp;//----------------------------------------------
 
     const commentEntryCommentEl = document.createElement('div');
     commentEntryCommentEl.classList.add('comment-entry__comment');
