@@ -1,11 +1,120 @@
-shows = [
-    {date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Francisco, CA"},
-    {date: "Tue Sept 21 2021", venue: "Pier 3 East", location: "San Francisco, CA"},
-    {date: "Fri Oct 15 2021", venue: "View Lounge", location: "San Francisco, CA"},
-    {date: "Sat Nov 06 2021", venue: "Hyatt Agency", location: "San Francisco, CA"},
-    {date: "Fri Nov 26 2021", venue: "Moscow Center", location: "San Francisco, CA"},
-    {date: "Wed Dec 15 2021", venue: "Press Club", location: "San Francisco, CA"}
-]
+import {api_key, BandSiteApi} from "./band-site-api.js";
+
+const BandSite = new BandSiteApi(api_key);
+
+const showsArray = await BandSite.getShows();
+console.log(showsArray)
+
+function convertEpochToWords(epochDate){
+    const date = new Date(epochDate);
+
+    let dayWord = date.getDay();
+    let dayNum = date.getDate();
+
+    switch (dayWord) {
+        case 1:
+            dayWord = "Mon"
+            break;
+    
+        case 2:
+            dayWord = "Tue"
+            break;
+    
+        case 3:
+            dayWord = "Wed"
+            break;
+    
+        case 4:
+            dayWord = "Thur"
+            break;
+    
+        case 5:
+            dayWord = "Fri"
+            break;
+    
+        case 6:
+            dayWord = "Sat"
+            break;
+    
+        case 7:
+            dayWord = "Sun"
+            break;
+    
+        default:
+            break;
+    }
+
+    let month = date.getMonth() + 1;
+    switch (month) {
+        case 1:
+            month = "Jan"
+            break;
+    
+        case 2:
+            month = "Feb"
+            break;
+    
+        case 3:
+            month = "Mar"
+            break;
+    
+        case 4:
+            month = "Apr"
+            break;
+    
+        case 5:
+            month = "May"
+            break;
+    
+        case 6:
+            month = "Jun"
+            break;
+    
+        case 7:
+            month = "Jul"
+            break;
+    
+        case 8:
+            month = "Aug"
+            break;
+    
+        case 9:
+            month = "Sep"
+            break;
+    
+        case 10:
+            month = "Oct"
+            break;
+    
+        case 11:
+            month = "Nov"
+            break;
+    
+        case 12:
+            month = "Dec"
+            break;
+    
+        default:
+            break;
+    }
+
+    const year = date.getFullYear();
+
+    //add a zero to the front of each single-digit number
+    // const currentDate = `${addZero(month)}/${addZero(day)}/${year}`;
+    const currentDate = `${dayWord} ${month} ${addZero(dayNum)} ${year}`;
+    return currentDate;
+}
+
+function addZero(num){
+    if (num < 10){
+        num = "0" + num.toString();
+        return num;
+    }
+    else{
+        return num;
+    }
+}
 
 function createShowsSection() {
     const mainEl = document.createElement("main");
@@ -50,7 +159,7 @@ function createShowsSection() {
     headerEmptyEl.innerText = "";
     table__headersEl.appendChild(headerEmptyEl);
 
-    shows.forEach(show => {
+    showsArray.forEach(show => {
         //create the list item element and child it to the end of the container
         const showItemEl = document.createElement("li");
         showItemEl.classList.add("show-item");
@@ -72,7 +181,7 @@ function createShowsSection() {
         //Date Text
         const dateTextEl = document.createElement("p");
         dateTextEl.classList.add("show-item__info-text");
-        dateTextEl.innerText = show.date;
+        dateTextEl.innerText = convertEpochToWords(show.date);
         dateInfoEl.appendChild(dateTextEl);
         
 
@@ -91,7 +200,7 @@ function createShowsSection() {
         //Venue Text
         const venueTextEl = document.createElement("p");
         venueTextEl.classList.add("show-item__info-text");
-        venueTextEl.innerText = show.venue;
+        venueTextEl.innerText = show.place;
         venueInfoEl.appendChild(venueTextEl);
 
         
@@ -121,11 +230,6 @@ function createShowsSection() {
         buttonEl.innerText = "Buy Tickets";
         buttonEl.type = "submit";
         buttonHolderEl.appendChild(buttonEl);
-
-        // const breakEl = document.createElement("li");
-        // breakEl.classList.add("show-break");
-        // shows__containerEl.appendChild(breakEl);
-
     });
 }
 

@@ -51,11 +51,21 @@ class BandSiteApi{
     }
 
     async getShows(){
+        const SHOWS_API_URL = this.baseUrl + "showdates?api_key=" + this.apiKey;
+
         try{
-            const response = await axios.get(this.baseUrl + "/showdates");
+            const showsResponse = await axios.get(SHOWS_API_URL);
+            const showsData = showsResponse.data;
+
+            //Sort the comments from soonest to farthest away
+            showsData.sort(function(a, b) {
+                return a.date - b.date;
+            })
+
+            return showsData;
 
         } catch(error){
-            console.error(error);
+            console.error("error getting comments: " + error);
         }
     }
 }
