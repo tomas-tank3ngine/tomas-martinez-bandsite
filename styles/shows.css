@@ -202,7 +202,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 
 .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 @media (min-width: 768px) {
   .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
