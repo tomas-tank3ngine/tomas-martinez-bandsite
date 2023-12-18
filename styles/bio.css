@@ -216,7 +216,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 @media (min-width: 768px) {
   .show-list-padding-format {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 }
 
@@ -536,7 +536,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .comments-format-container .comments-section .new-comment {
   display: flex;
-  border-bottom: #E1E1E1 solid 1px;
+  border-bottom: #E1E1E1 solid 0.0625rem;
 }
 .main .comments-format-container .comments-section .new-comment__headshot-container {
   padding-top: 2.5rem;
@@ -591,7 +591,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   border-radius: 0.25rem;
   padding: 0.75rem;
   margin-top: 0.25rem;
-  border: 1px solid #E1E1E1;
+  border: 0.0625rem solid #E1E1E1;
 }
 @media (min-width: 768px) {
   .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
@@ -622,7 +622,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry {
   display: flex;
   position: relative;
-  border-bottom: 1px #E1E1E1 solid;
+  border-bottom: 0.0625rem #E1E1E1 solid;
   padding: 0.5rem 0;
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry__headshot-container {

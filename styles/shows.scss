@@ -116,7 +116,7 @@
         @include desktop{
             flex-direction: row;            
             justify-content: space-between;
-            padding-right: 80px;
+            padding-right: 7vw;
         }
 
         &__title{
@@ -135,7 +135,7 @@
         }
 
         &__container{
-            margin: 0 16px;
+            margin: 0 1rem;
             @include desktop{
                 flex-grow: 1;
             }
@@ -166,7 +166,7 @@
                 display: flex;
                 flex-direction: column;
                 @extend .show-list-padding-format;
-                border-bottom: 1px solid $color-secondary-bandsite-mercury;
+                border-bottom: 0.0625rem solid $color-secondary-bandsite-mercury;
 
                 &:hover{
                     background-color: $color-secondary-bandsite-alabaster;
@@ -219,13 +219,4 @@
             }
         }
     }
-}
-
-//NOT USED
-.show-break{
-    border-bottom: 1px solid $color-secondary-bandsite-mercury;
-    width: 104%;
-    overflow-x:hidden;
-    position: relative;
-    right: 2%;
 }

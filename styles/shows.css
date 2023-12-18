@@ -203,7 +203,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 
 @media (min-width: 768px) {
   .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 }
 
@@ -495,7 +495,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   .main .shows-table {
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 80px;
+    padding-right: 7vw;
   }
 }
 .main .shows-table__title {
@@ -512,7 +512,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 .main .shows-table__container {
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 @media (min-width: 1280px) {
   .main .shows-table__container {
@@ -544,7 +544,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .shows-table__container .show-item {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 0.0625rem solid #E1E1E1;
 }
 .main .shows-table__container .show-item:hover {
   background-color: #FAFAFA;
@@ -587,12 +587,4 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .shows-table__container .show-item .show-item__info .button {
   width: 100%;
   font-size: 1rem;
-}
-
-.show-break {
-  border-bottom: 1px solid #E1E1E1;
-  width: 104%;
-  overflow-x: hidden;
-  position: relative;
-  right: 2%;
 }/*# sourceMappingURL=shows.css.map */
