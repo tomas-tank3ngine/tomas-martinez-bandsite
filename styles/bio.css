@@ -26,6 +26,7 @@ img {
 p, h1, h2, h3, h4, h5, h6, li {
   margin: 0;
   padding: 0;
+  font-weight: unset;
 }
 
 @font-face {
@@ -38,26 +39,26 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-family: "Avenir";
   src: url("/assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
-  font-weight: 600;
+  font-weight: 500;
 }
 @font-face {
   font-family: "Avenir";
   src: url("/assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-weight: 600;
 }
 .page-header, .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .page-header, .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -65,14 +66,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .section-header, .main .about__section-header, .main .photo-gallery-format-container .photo-gallery__title, .main .comments-format-container .comments-section__title, .footer .footer-top__left-container .social-media__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -80,14 +81,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .subheader, .main .about__quote-container .about__quote, .main .about__quote-container .about__quote-author, .main .about__bio-title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -138,14 +139,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .label, .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -156,6 +157,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-color: #323232;
   color: #FFFFFF;
   width: 100%;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .button, .main .comments-format-container .comments-section .new-comment__form .fieldset__button {
@@ -212,25 +214,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.show-list-padding-format {
-  padding: 0 1rem;
-}
 @media (min-width: 768px) {
   .show-list-padding-format {
-    padding: 0 2.25rem;
+    padding: 0 20px;
   }
 }
 
 .bold {
   font-weight: 900;
-}
-
-.hr {
-  border: none;
-  border-top: 0.0625rem solid red;
-  width: 100%;
-  margin-left: 9%;
-  overflow: hidden;
 }
 
 .header {
@@ -297,7 +288,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header .navigation__ulist .navigation__item .navigation__link.active-page {
   border-bottom: solid white 0.125rem;
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .footer {
@@ -378,10 +369,10 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
-  font-weight: bold;
+  font-weight: 500;
 }
 .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation {
-  font-weight: bold;
+  font-weight: 500;
 }
 .footer .footer-bottom .copyright .copyright__text {
   margin-bottom: 1rem;
@@ -589,7 +580,6 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .comments-format-container .comments-section .new-comment__form .fieldset__title {
   text-transform: uppercase;
   width: 100%;
-  font-weight: bold;
   color: #AFAFAF;
   padding: 0;
   margin: 0;
@@ -670,8 +660,8 @@ p, h1, h2, h3, h4, h5, h6, li {
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container .comment-entry__info .comment-entry__name {
   padding-bottom: 0.5rem;
+  font-weight: 500;
 }
 .main .comments-format-container .comments-section .comment-entry__container .comment-entry .comment-entry__comment-container .comment-entry__info .comment-entry__timestamp {
   color: #AFAFAF;
-  font-weight: unset;
 }/*# sourceMappingURL=bio.css.map */

@@ -1,33 +1,6 @@
 import {api_key, BandSiteApi} from "./band-site-api.js";
 
 const BandSite = new BandSiteApi(api_key);
-// console.log("Key is: "+ BandSite.apiKey)
-// console.log(await BandSite.getComments());
-
-const comments = [
-    // {name: "Connor Walton", timestamp: "02/17/2021", text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
-    // {name: "Emilie Beach", timestamp: "01/09/2021", text: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
-    // {name: "Miles Acosta", timestamp: "12/20/2020", text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."}
-    // await BandSite.getComments()
-];
-
-//Calculates current timestamp when new comment is submitted
-// function currentTimestamp(){
-//     const date = new Date();
-
-//     const day = date.getDate();
-//     console.log(day)
-//     const month = date.getMonth() + 1;
-//     const year = date.getFullYear();
-
-//     if (day < 10){
-//         day = "0" + day.toString();
-//         console.log(day);
-//     }
-
-//     const currentDate = `${month}/${day}/${year}`;
-//     return currentDate;
-// }
 
 function convertEpochToReadable(epochTimestamp){
     const date = new Date(epochTimestamp);
@@ -36,11 +9,11 @@ function convertEpochToReadable(epochTimestamp){
     let month = date.getMonth() + 1;
     const year = date.getFullYear();
 
-    //add a zero to the front of each single-digit number
     const currentDate = `${addZero(month)}/${addZero(day)}/${year}`;
     return currentDate;
 }
 
+//Function for adding a zero to the front of each single-digit number
 function addZero(num){
     if (num < 10){
         num = "0" + num.toString();
@@ -78,18 +51,18 @@ function createComment(commentObj){
     
     const commentEntryNameEl = document.createElement('h3');
     commentEntryNameEl.classList.add('comment-entry__name');
-    commentEntryNameEl.innerText = commentObj.name;//----------------------------------------------
+    commentEntryNameEl.innerText = commentObj.name;
     
     const commentEntryTimeEl = document.createElement('h3');
     commentEntryTimeEl.classList.add('comment-entry__timestamp');
-    commentEntryTimeEl.innerText = convertEpochToReadable(commentObj.timestamp);//----------------------------------------------
+    commentEntryTimeEl.innerText = convertEpochToReadable(commentObj.timestamp);
 
     const commentEntryCommentEl = document.createElement('div');
     commentEntryCommentEl.classList.add('comment-entry__comment');
 
     const commentEntryTextEl = document.createElement('p');
     commentEntryTextEl.classList.add('comment-entry__text');
-    commentEntryTextEl.innerText = commentObj.comment;//---------------------------------------------
+    commentEntryTextEl.innerText = commentObj.comment;
 
     commentEl.appendChild(headshotContainerEl);
     commentEl.appendChild(commentEntryContainerEl);
@@ -141,12 +114,10 @@ async function handleFormSubmission(event){
     const commentData = {
         name: event.target.fullName.value,
         comment: event.target.commentText.value
-        // timestamp: currentTimestampEpoch().toString()
     };
 
-    const jsonComment = JSON.stringify(commentData);
     try {
-        await BandSite.postComment(jsonComment);
+        await BandSite.postComment(commentData);
         renderComments();
         formEl.reset();
     } catch (error) {
@@ -155,7 +126,6 @@ async function handleFormSubmission(event){
 
 }
 
-// const formEl = document.getElementById("new-comment__form");
 const formEl = document.querySelector(".new-comment__form");
 formEl.addEventListener("submit", handleFormSubmission);
 

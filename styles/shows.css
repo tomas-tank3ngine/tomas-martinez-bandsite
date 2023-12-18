@@ -26,6 +26,7 @@ img {
 p, h1, h2, h3, h4, h5, h6, li {
   margin: 0;
   padding: 0;
+  font-weight: unset;
 }
 
 @font-face {
@@ -38,26 +39,26 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-family: "Avenir";
   src: url("/assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
-  font-weight: 600;
+  font-weight: 500;
 }
 @font-face {
   font-family: "Avenir";
   src: url("/assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
   src: url("/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-weight: 600;
 }
 .page-header, .hero__overlay .hero__band-info .hero__album-name {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .page-header, .hero__overlay .hero__band-info .hero__album-name {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -65,14 +66,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .section-header, .hero__overlay .hero__band-info .hero__band, .main .shows-table__title, .footer .footer-top__left-container .social-media__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -80,14 +81,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .subheader {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -125,14 +126,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-family: "Avenir", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .label, .main .shows-table__container .shows-table__headers .shows-table__header, .main .shows-table__container .show-item .show-item__info .show-item__info-header, .button {
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: "Avenir", Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
@@ -143,6 +144,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   background-color: #323232;
   color: #FFFFFF;
   width: 100%;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .button {
@@ -199,25 +201,14 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
-.show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
-  padding: 0 1rem;
-}
 @media (min-width: 768px) {
   .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
-    padding: 0 2.25rem;
+    padding: 0 20px;
   }
 }
 
 .bold {
   font-weight: 900;
-}
-
-.hr {
-  border: none;
-  border-top: 0.0625rem solid red;
-  width: 100%;
-  margin-left: 9%;
-  overflow: hidden;
 }
 
 .header {
@@ -284,7 +275,7 @@ p, h1, h2, h3, h4, h5, h6, li {
 .header .navigation__ulist .navigation__item .navigation__link.active-page {
   border-bottom: solid white 0.125rem;
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .footer {
@@ -365,10 +356,10 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__name {
-  font-weight: bold;
+  font-weight: 500;
 }
 .footer .footer-bottom .business-contacts__contact-profile .business-contacts__contact-group .business-contacts__affiliation {
-  font-weight: bold;
+  font-weight: 500;
 }
 .footer .footer-bottom .copyright .copyright__text {
   margin-bottom: 1rem;
@@ -504,6 +495,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   .main .shows-table {
     flex-direction: row;
     justify-content: space-between;
+    padding-right: 80px;
   }
 }
 .main .shows-table__title {
@@ -518,6 +510,9 @@ p, h1, h2, h3, h4, h5, h6, li {
   .main .shows-table__title {
     margin-top: 0;
   }
+}
+.main .shows-table__container {
+  margin: 0 16px;
 }
 @media (min-width: 1280px) {
   .main .shows-table__container {
@@ -540,7 +535,6 @@ p, h1, h2, h3, h4, h5, h6, li {
 .main .shows-table__container .shows-table__headers .shows-table__header {
   text-transform: uppercase;
   width: 100%;
-  font-weight: bold;
   color: #AFAFAF;
   padding: 0;
   margin: 0;
@@ -588,7 +582,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 .main .shows-table__container .show-item .show-item__info .show-item__info-text.bold {
-  font-weight: bolder;
+  font-weight: 500;
 }
 .main .shows-table__container .show-item .show-item__info .button {
   width: 100%;

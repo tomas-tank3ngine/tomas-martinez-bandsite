@@ -7,44 +7,43 @@ console.log(showsArray)
 
 function convertEpochToWords(epochDate){
     const date = new Date(epochDate);
-
-    let dayWord = date.getDay();
+    let dayName = date.getDay();
     let dayNum = date.getDate();
+    let month = date.getMonth() + 1;
 
-    switch (dayWord) {
+    switch (dayName) {
         case 1:
-            dayWord = "Mon"
+            dayName = "Mon"
             break;
     
         case 2:
-            dayWord = "Tue"
+            dayName = "Tue"
             break;
     
         case 3:
-            dayWord = "Wed"
+            dayName = "Wed"
             break;
     
         case 4:
-            dayWord = "Thur"
+            dayName = "Thur"
             break;
     
         case 5:
-            dayWord = "Fri"
+            dayName = "Fri"
             break;
     
         case 6:
-            dayWord = "Sat"
+            dayName = "Sat"
             break;
     
         case 7:
-            dayWord = "Sun"
+            dayName = "Sun"
             break;
     
         default:
             break;
     }
-
-    let month = date.getMonth() + 1;
+    
     switch (month) {
         case 1:
             month = "Jan"
@@ -101,8 +100,7 @@ function convertEpochToWords(epochDate){
     const year = date.getFullYear();
 
     //add a zero to the front of each single-digit number
-    // const currentDate = `${addZero(month)}/${addZero(day)}/${year}`;
-    const currentDate = `${dayWord} ${month} ${addZero(dayNum)} ${year}`;
+    const currentDate = `${dayName} ${month} ${addZero(dayNum)} ${year}`;
     return currentDate;
 }
 
@@ -181,6 +179,7 @@ function createShowsSection() {
         //Date Text
         const dateTextEl = document.createElement("p");
         dateTextEl.classList.add("show-item__info-text");
+        dateTextEl.classList.add("bold");
         dateTextEl.innerText = convertEpochToWords(show.date);
         dateInfoEl.appendChild(dateTextEl);
         

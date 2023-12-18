@@ -13,27 +13,29 @@
     font-family: 'Avenir';
     src: url('/assets/fonts/AvenirNextLTProDemi.ttf') format('truetype');
     src: url('/assets/fonts/AvenirNextLTPro-Demi.otf') format('opentype');
-    font-weight: 600;
+    font-weight: 500;
 }
 @font-face {
     font-family: 'Avenir';
     src: url('/assets/fonts/AvenirNextLTProBold.ttf') format('truetype');
     src: url('/assets/fonts/AvenirNextLTPro-Bold.otf') format('opentype');
-    font-weight: 700;
+    font-weight: 600;
 }
+
+
 
 // Extends
 .page-header{
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 
     @include tablet{
         font-size: 3.75rem;
         line-height: 4.25rem;
         font-family: 'Avenir', Arial, sans-serif;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
@@ -41,13 +43,13 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 
     @include tablet{
         font-size: 2.25rem;
         line-height: 2.75rem;
         font-family: 'Avenir', Arial, sans-serif;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
@@ -55,13 +57,13 @@
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 
     @include tablet{
         font-size: 1.5rem;
         line-height: 2rem;
         font-family: 'Avenir', Arial, sans-serif;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
@@ -96,13 +98,13 @@
     font-size: 0.625rem;
     line-height: 1.25rem;
     font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 700;    
+    font-weight: 500;    
     
     @include tablet{
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-family: 'Avenir', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     }
 }
 
@@ -114,6 +116,7 @@
     background-color: $color-primary-bandsite-black;
     color: $color-primary-white;
     width: 100%;
+    text-transform: uppercase;
     @include tablet{
         min-width:9.375rem;
         width: 10%;
@@ -165,23 +168,15 @@
 }
 
 .show-list-padding-format{
-    padding: 0 1rem;    
+    // padding: 0 16px;    
 
     @include tablet {
-        padding: 0 2.25rem;
+        padding: 0 20px;
     }
 }
 
 .bold{
     font-weight: 900;
-}
-
-.hr{
-    border: none;
-    border-top: 0.0625rem solid red;
-    width: 100%;  
-    margin-left: 9%;  
-    overflow: hidden;
 }
 
 .header{
@@ -248,7 +243,7 @@
                     &.active-page{
                         border-bottom: solid rgba($color-primary-white, 1) 0.125rem;
                         color: $color-primary-white;
-                        font-weight: bold;
+                        font-weight: 500;
                     }
                 }
             }
@@ -345,11 +340,11 @@
                     }
                     
                     .business-contacts__name{
-                        font-weight: bold;
+                        font-weight: 500;
                     }
             
                     .business-contacts__affiliation{
-                        font-weight: bold;
+                        font-weight: 500;
                     }
                 }
             }

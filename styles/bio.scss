@@ -208,7 +208,7 @@
                             @extend .body-copy;
                             text-transform: uppercase;
                             width: 100%;
-                            font-weight: bold;
+                            // font-weight: bold;
                             color: $color-primary-silver;
                             padding: 0;
                             margin: 0;
@@ -303,11 +303,12 @@
                             align-items: flex-start;
                             .comment-entry__name{
                                 padding-bottom: 0.5rem;
+                                font-weight: 500;
                             }
 
                             .comment-entry__timestamp{
                                 color: $color-primary-silver;
-                                font-weight: unset;
+                                // font-weight: unset;
                             }
                         }
                         .comment-entry__comment{

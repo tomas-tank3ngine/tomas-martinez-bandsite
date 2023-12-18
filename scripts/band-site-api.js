@@ -1,12 +1,4 @@
-// import axios from 'axios';
 const api_key = "abaf0f0f-c151-4d89-b72a-7e05e264f0e7";
-//?api_key=abaf0f0f-c151-4d89-b72a-7e05e264f0e7
-
-// const commentData = {
-//     name: event.target.fullName.value,
-//     timestamp: currentTimestamp(),
-//     text: event.target.commentText.value,
-// };
 
 class BandSiteApi{
     constructor(apiKey){
@@ -24,6 +16,7 @@ class BandSiteApi{
         }
 
         try{
+            //Third arg in axios.post is for headers
             await axios.post(COMMENTS_API_URL, commentObj, {headers});
 
         } catch(error){
