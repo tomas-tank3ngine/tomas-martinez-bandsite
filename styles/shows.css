@@ -201,6 +201,9 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+.show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
+  padding: 0 16px;
+}
 @media (min-width: 768px) {
   .show-list-padding-format, .main .shows-table__container .shows-table__headers, .main .shows-table__container .show-item {
     padding: 0 1.25rem;
@@ -511,8 +514,10 @@ p, h1, h2, h3, h4, h5, h6, li {
     margin-top: 0;
   }
 }
-.main .shows-table__container {
-  margin: 0 1rem;
+@media (min-width: 768px) {
+  .main .shows-table__container {
+    margin: 0 1rem;
+  }
 }
 @media (min-width: 1280px) {
   .main .shows-table__container {

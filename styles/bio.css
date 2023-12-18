@@ -214,6 +214,9 @@ p, h1, h2, h3, h4, h5, h6, li {
   }
 }
 
+.show-list-padding-format {
+  padding: 0 16px;
+}
 @media (min-width: 768px) {
   .show-list-padding-format {
     padding: 0 1.25rem;
@@ -586,6 +589,7 @@ p, h1, h2, h3, h4, h5, h6, li {
   line-height: unset;
 }
 .main .comments-format-container .comments-section .new-comment__form .fieldset__label input, .main .comments-format-container .comments-section .new-comment__form .fieldset__label textarea {
+  background-color: #FAFAFA;
   width: 100%;
   min-height: 2.25rem;
   border-radius: 0.25rem;

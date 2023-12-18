@@ -105,8 +105,6 @@
 }
 
 .main{
-    
-    
     .shows-table{
         display: flex;
         flex-direction: column;
@@ -135,7 +133,9 @@
         }
 
         &__container{
-            margin: 0 1rem;
+            @include tablet{
+                margin: 0 1rem;
+            }
             @include desktop{
                 flex-grow: 1;
             }

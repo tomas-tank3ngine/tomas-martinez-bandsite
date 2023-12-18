@@ -3,7 +3,6 @@ import {api_key, BandSiteApi} from "./band-site-api.js";
 const BandSite = new BandSiteApi(api_key);
 
 const showsArray = await BandSite.getShows();
-console.log(showsArray)
 
 function convertEpochToWords(epochDate){
     const date = new Date(epochDate);
@@ -115,9 +114,7 @@ function addZero(num){
 }
 
 function createShowsSection() {
-    const mainEl = document.createElement("main");
-    mainEl.classList.add("main");
-    document.body.insertBefore(mainEl, document.querySelector("footer"));
+    const mainEl = document.querySelector(".main");
     
     const showsEl = document.createElement("section");
     showsEl.classList.add("shows-table");

@@ -89,12 +89,6 @@ async function renderComments() {
     try {
         //wait for the Api to return the array of comments
         const apiComments = await BandSite.getComments();
-        console.log(apiComments);
-
-        const userComments = apiComments.map(() => 
-            console.log()
-            
-        )
 
         //iterate through comments array retrieved from API
         apiComments.forEach(commentObj => {
